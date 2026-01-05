@@ -1,0 +1,17 @@
+{
+  "name": "tweet-processor",
+  "version": "1.0.0",
+  "description": "Process tweet screenshots and create organized Obsidian notes using AI vision",
+  "main": "process-tweets.js",
+  "scripts": {
+    "process": "node process-tweets.js",
+    "test": "node process-tweets.js --dry-run"
+  },
+  "keywords": ["obsidian", "tweets", "automation", "gemini", "vision-ai"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5"
+  }
+}
