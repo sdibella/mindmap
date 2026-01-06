@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Tweet Screenshot Processor
- * Processes tweet screenshots using Gemini Flash vision API and creates organized Obsidian notes
+ * Xeet Screenshot Processor
+ * Processes X (Twitter) post screenshots using Gemini Flash vision API and creates organized Obsidian notes
  */
 
 const fs = require('fs');
@@ -13,12 +13,12 @@ require('dotenv').config();
 // Configuration
 const CONFIG = {
   vaultPath: process.env.VAULT_PATH || path.join(process.env.HOME, 'Library/Mobile Documents/iCloud~md~obsidian/Documents/StefanEternal'),
-  screenshotsDir: 'Attachments/Tweets',
-  resourcesDir: '03 - Resources/Twitter Insights',
+  screenshotsDir: 'Attachments/Xeets',
+  resourcesDir: '03 - Resources/X Insights',
   projectsDir: '01 - Projects/Ideas',
-  unsureDir: '00 - Inbox/Tweets to Review',
-  logFile: '00 - Inbox/Tweet Processing Log.md',
-  processedMarkerFile: '.processed-tweets.json',
+  unsureDir: '00 - Inbox/Xeets to Review',
+  logFile: '00 - Inbox/Xeet Processing Log.md',
+  processedMarkerFile: '.processed-xeets.json',
   confidenceThreshold: parseFloat(process.env.CONFIDENCE_THRESHOLD) || 0.7,
   aiProvider: process.env.AI_PROVIDER || 'gemini', // 'gemini' or 'claude'
   dryRun: process.argv.includes('--dry-run')
@@ -281,11 +281,11 @@ function markAsProcessed(filename) {
  * Main processing function
  */
 async function main() {
-  console.log('🐦 Tweet Screenshot Processor');
+  console.log('🐦 Xeet Screenshot Processor');
   console.log('================================\n');
   console.log(`Vault: ${CONFIG.vaultPath}`);
   console.log(`AI Provider: ${CONFIG.aiProvider}`);
-  console.log(`Confidence Threshold: ${CONFIG.confidenceThreshold} (tweets below this go to Inbox for review)`);
+  console.log(`Confidence Threshold: ${CONFIG.confidenceThreshold} (xeets below this go to Inbox for review)`);
   console.log(`Mode: ${CONFIG.dryRun ? 'DRY RUN' : 'LIVE'}\n`);
 
   // Find new screenshots

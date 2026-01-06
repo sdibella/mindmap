@@ -1,11 +1,11 @@
-# Tweet Screenshot Processor
+# Xeet Screenshot Processor
 
-Automatically process tweet screenshots from iOS and create organized, categorized notes in your Obsidian vault using AI vision.
+Automatically process X (Twitter) post screenshots from iOS and create organized, categorized notes in your Obsidian vault using AI vision.
 
 ## Features
 
-- Extracts text, author, dates, and engagement metrics from tweet screenshots
-- Uses AI (Gemini Flash or Claude Vision) to categorize and summarize tweets
+- Extracts text, author, dates, and engagement metrics from X post screenshots
+- Uses AI (Gemini Flash or Claude Vision) to categorize and summarize xeets
 - **Confidence-based routing** - uncertain categorizations go to Inbox for manual review
 - Auto-generates formatted markdown notes in your PARA-organized Obsidian vault
 - Supports both manual execution and automated cron scheduling
@@ -14,8 +14,8 @@ Automatically process tweet screenshots from iOS and create organized, categoriz
 ## How It Works
 
 ```
-1. Screenshot tweet on iOS
-2. Share to Obsidian → Attachments/Tweets/
+1. Screenshot xeet on iOS
+2. Share to Obsidian → Attachments/Xeets/
 3. Run processor (manual or cron)
 4. AI analyzes screenshot and assigns confidence score
 5. Routes to appropriate folder:
@@ -127,7 +127,7 @@ pm2 startup
 When you see a tweet you want to save:
 1. Take a screenshot (side button + volume up)
 2. Tap the screenshot thumbnail
-3. Share → Obsidian → Save to `Attachments/Tweets/`
+3. Share → Obsidian → Save to `Attachments/Xeets/`
 
 ### 2. Process Screenshots
 
@@ -139,7 +139,7 @@ npm run process
 ### 3. Review Generated Notes
 
 The processor will create notes in:
-- **Resources:** `03 - Resources/Twitter Insights/` (for learning/reference tweets)
+- **Resources:** `03 - Resources/X Insights/` (for learning/reference tweets)
 - **Project Ideas:** `01 - Projects/Ideas/` (for tweets that inspire projects)
 
 Each note includes:
@@ -159,7 +159,7 @@ View processing history:
 
 ## Output Example
 
-**Generated note:** `03 - Resources/Twitter Insights/building-rag-systems-with-claude.md`
+**Generated note:** `03 - Resources/X Insights/building-rag-systems-with-claude.md`
 
 ```markdown
 ---
@@ -170,7 +170,7 @@ author_name: Shawn Wang
 tags: ["ai", "rag", "claude", "llm"]
 category: resource
 confidence: 0.92
-screenshot: "[[Attachments/Tweets/IMG_1234.png]]"
+screenshot: "[[Attachments/Xeets/IMG_1234.png]]"
 ---
 
 # Building RAG Systems with Claude
@@ -185,7 +185,7 @@ screenshot: "[[Attachments/Tweets/IMG_1234.png]]"
 > Game changer for technical documentation search.
 > No more chunking headaches! 🚀
 
-![[Attachments/Tweets/IMG_1234.png]]
+![[Attachments/Xeets/IMG_1234.png]]
 
 ## Key Insights
 
@@ -201,7 +201,7 @@ Directly applicable to current Alchemer Ash project which uses RAG for Slack bot
 
 ---
 **Captured from:** [[00 - Inbox/📥 Quick Capture|Quick Capture]]
-**Screenshot:** [[Attachments/Tweets/IMG_1234.png]]
+**Screenshot:** [[Attachments/Xeets/IMG_1234.png]]
 ```
 
 ## Configuration
@@ -212,14 +212,14 @@ The processor expects this PARA structure:
 ```
 StefanEternal/
 ├── 00 - Inbox/
-│   ├── Tweets to Review/ (low-confidence tweets for manual review)
-│   └── Tweet Processing Log.md (auto-generated)
+│   ├── Xeets to Review/ (low-confidence xeets for manual review)
+│   └── Xeet Processing Log.md (auto-generated)
 ├── 01 - Projects/
-│   └── Ideas/ (high-confidence project-idea tweets)
+│   └── Ideas/ (high-confidence project-idea xeets)
 ├── 03 - Resources/
-│   └── Twitter Insights/ (high-confidence resource tweets)
+│   └── X Insights/ (high-confidence resource xeets)
 └── Attachments/
-    └── Tweets/ (put screenshots here)
+    └── Xeets/ (put screenshots here)
 ```
 
 ### Confidence-Based Routing
@@ -229,7 +229,7 @@ The processor uses AI confidence scoring to ensure quality categorization:
 **How it works:**
 1. AI analyzes the screenshot and assigns a confidence score (0.0 - 1.0)
 2. High confidence (≥0.7) → Automatically filed in Resources or Projects
-3. Low confidence (<0.7) → Routed to `00 - Inbox/Tweets to Review/` for manual review
+3. Low confidence (<0.7) → Routed to `00 - Inbox/Xeets to Review/` for manual review
 
 **Why this matters:**
 - Prevents miscategorization of ambiguous tweets
@@ -289,7 +289,7 @@ The rest of the code (screenshot finding, note generation, logging) remains unch
 ## Troubleshooting
 
 ### No screenshots found
-- Check that screenshots are in `Attachments/Tweets/` folder
+- Check that screenshots are in `Attachments/Xeets/` folder
 - Ensure vault path is correct in `.env`
 
 ### API errors
