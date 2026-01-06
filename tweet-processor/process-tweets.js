@@ -16,8 +16,10 @@ const CONFIG = {
   screenshotsDir: 'Attachments/Tweets',
   resourcesDir: '03 - Resources/Twitter Insights',
   projectsDir: '01 - Projects/Ideas',
+  unsureDir: '00 - Inbox/Tweets to Review',
   logFile: '00 - Inbox/Tweet Processing Log.md',
   processedMarkerFile: '.processed-tweets.json',
+  confidenceThreshold: parseFloat(process.env.CONFIDENCE_THRESHOLD) || 0.7,
   aiProvider: process.env.AI_PROVIDER || 'gemini', // 'gemini' or 'claude'
   dryRun: process.argv.includes('--dry-run')
 };
@@ -91,6 +93,7 @@ Extract the following information from this tweet screenshot and respond ONLY wi
     "replies": number or null
   },
   "category": "resource" or "project-idea",
+  "confidence": 0.85,
   "tags": ["tag1", "tag2", "tag3"],
   "summary": "one-sentence key insight",
   "title": "suggested note title (4-6 words)",
@@ -100,6 +103,11 @@ Extract the following information from this tweet screenshot and respond ONLY wi
 CATEGORIZATION RULES:
 - "resource" = learning material, reference, industry insights, tutorials, interesting facts
 - "project-idea" = something that could be built, explored, or implemented
+- "confidence" = 0.0 to 1.0 score indicating how certain you are about the categorization
+  - 1.0 = very clear (obvious learning resource or obvious project idea)
+  - 0.5 = unclear (could be either, ambiguous content, or not relevant to user)
+  - Use 0.8+ for clear categorizations
+  - Use 0.5-0.7 for uncertain cases
 
 CONTEXT: User is a software engineer working on:
 - AI/LLM projects (Claude API, RAG chatbots, Chrome extensions)
@@ -144,6 +152,7 @@ author_name: ${tweetData.authorName}
 date: ${tweetData.date || 'unknown'}
 tags: ${JSON.stringify(tweetData.tags)}
 category: ${tweetData.category}
+confidence: ${tweetData.confidence}
 screenshot: "[[${screenshotPath}]]"
 ---`;
 
@@ -182,9 +191,15 @@ ${tweetData.relevance}
  * Save note to appropriate directory
  */
 function saveNote(tweetData, noteContent, screenshot) {
-  const targetDir = tweetData.category === 'resource'
-    ? CONFIG.resourcesDir
-    : CONFIG.projectsDir;
+  // Determine target directory based on confidence
+  let targetDir;
+  if (tweetData.confidence < CONFIG.confidenceThreshold) {
+    targetDir = CONFIG.unsureDir;
+  } else {
+    targetDir = tweetData.category === 'resource'
+      ? CONFIG.resourcesDir
+      : CONFIG.projectsDir;
+  }
 
   const dirPath = path.join(CONFIG.vaultPath, targetDir);
 
@@ -270,6 +285,7 @@ async function main() {
   console.log('================================\n');
   console.log(`Vault: ${CONFIG.vaultPath}`);
   console.log(`AI Provider: ${CONFIG.aiProvider}`);
+  console.log(`Confidence Threshold: ${CONFIG.confidenceThreshold} (tweets below this go to Inbox for review)`);
   console.log(`Mode: ${CONFIG.dryRun ? 'DRY RUN' : 'LIVE'}\n`);
 
   // Find new screenshots
@@ -292,7 +308,10 @@ async function main() {
 
       // Analyze with AI
       const tweetData = await analyzeScreenshot(screenshot.fullPath);
-      console.log(`  Category: ${tweetData.category}`);
+      console.log(`  Category: ${tweetData.category} (confidence: ${tweetData.confidence.toFixed(2)})`);
+      if (tweetData.confidence < CONFIG.confidenceThreshold) {
+        console.log(`  ⚠️  Low confidence - routing to: ${CONFIG.unsureDir}`);
+      }
       console.log(`  Tags: ${tweetData.tags.join(', ')}`);
 
       // Generate note

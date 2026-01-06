@@ -6,6 +6,7 @@ Automatically process tweet screenshots from iOS and create organized, categoriz
 
 - Extracts text, author, dates, and engagement metrics from tweet screenshots
 - Uses AI (Gemini Flash or Claude Vision) to categorize and summarize tweets
+- **Confidence-based routing** - uncertain categorizations go to Inbox for manual review
 - Auto-generates formatted markdown notes in your PARA-organized Obsidian vault
 - Supports both manual execution and automated cron scheduling
 - Easy to switch between AI providers (currently: Gemini, future: Claude)
@@ -16,9 +17,12 @@ Automatically process tweet screenshots from iOS and create organized, categoriz
 1. Screenshot tweet on iOS
 2. Share to Obsidian → Attachments/Tweets/
 3. Run processor (manual or cron)
-4. AI analyzes screenshot
-5. Creates organized note in Resources or Projects
-6. Logs to processing history
+4. AI analyzes screenshot and assigns confidence score
+5. Routes to appropriate folder:
+   - High confidence (≥0.7) → Resources or Projects
+   - Low confidence (<0.7) → Inbox for manual review
+6. Creates organized note with AI insights
+7. Logs to processing history
 ```
 
 ## Prerequisites
@@ -165,6 +169,7 @@ author: @swyx
 author_name: Shawn Wang
 tags: ["ai", "rag", "claude", "llm"]
 category: resource
+confidence: 0.92
 screenshot: "[[Attachments/Tweets/IMG_1234.png]]"
 ---
 
@@ -207,14 +212,45 @@ The processor expects this PARA structure:
 ```
 StefanEternal/
 ├── 00 - Inbox/
+│   ├── Tweets to Review/ (low-confidence tweets for manual review)
 │   └── Tweet Processing Log.md (auto-generated)
 ├── 01 - Projects/
-│   └── Ideas/ (project-idea tweets go here)
+│   └── Ideas/ (high-confidence project-idea tweets)
 ├── 03 - Resources/
-│   └── Twitter Insights/ (resource tweets go here)
+│   └── Twitter Insights/ (high-confidence resource tweets)
 └── Attachments/
     └── Tweets/ (put screenshots here)
 ```
+
+### Confidence-Based Routing
+
+The processor uses AI confidence scoring to ensure quality categorization:
+
+**How it works:**
+1. AI analyzes the screenshot and assigns a confidence score (0.0 - 1.0)
+2. High confidence (≥0.7) → Automatically filed in Resources or Projects
+3. Low confidence (<0.7) → Routed to `00 - Inbox/Tweets to Review/` for manual review
+
+**Why this matters:**
+- Prevents miscategorization of ambiguous tweets
+- Catches tweets that might not be relevant to your work
+- Integrates with your weekly inbox review workflow
+- You make the final decision on uncertain items
+
+**Adjusting the threshold:**
+Edit `.env` to change sensitivity:
+```bash
+CONFIDENCE_THRESHOLD=0.7  # Default (recommended: 0.6 - 0.8)
+```
+
+- Lower (0.6) = More automatic filing, some miscategorizations
+- Higher (0.8) = More manual review, fewer mistakes
+
+**Example confidence scores:**
+- 0.95 = Crystal clear (e.g., "Here's a tutorial on building RAG systems")
+- 0.75 = Pretty clear (e.g., technical insight that's clearly a resource)
+- 0.55 = Uncertain (e.g., could be interesting but not clearly relevant)
+- 0.30 = Very unclear (e.g., random meme, off-topic content)
 
 ### AI Provider Configuration
 
