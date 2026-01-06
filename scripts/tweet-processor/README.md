@@ -7,6 +7,8 @@ Automatically process X (Twitter) post screenshots from iOS and create organized
 - Extracts text, author, dates, and engagement metrics from X post screenshots
 - Uses AI (Gemini Flash or Claude Vision) to categorize and summarize xeets
 - **Confidence-based routing** - uncertain categorizations go to Inbox for manual review
+- **Auto-research** - automatically searches the web for related articles and resources
+- **AI-powered relevance filtering** - ranks and filters search results by relevance to your interests
 - Auto-generates formatted markdown notes in your PARA-organized Obsidian vault
 - Supports both manual execution and automated cron scheduling
 - Easy to switch between AI providers (currently: Gemini, future: Claude)
@@ -18,11 +20,16 @@ Automatically process X (Twitter) post screenshots from iOS and create organized
 2. Share to Obsidian → Attachments/Xeets/
 3. Run processor (manual or cron)
 4. AI analyzes screenshot and assigns confidence score
-5. Routes to appropriate folder:
+5. Auto-research (NEW):
+   - AI generates optimal search query from tweet content
+   - Searches web for related articles/resources
+   - AI filters and ranks results by relevance
+   - Adds top results to note with summaries
+6. Routes to appropriate folder:
    - High confidence (≥0.7) → Resources or Projects
    - Low confidence (<0.7) → Inbox for manual review
-6. Creates organized note with AI insights
-7. Logs to processing history
+7. Creates organized note with AI insights + research findings
+8. Logs to processing history
 ```
 
 ## Prerequisites
@@ -30,6 +37,7 @@ Automatically process X (Twitter) post screenshots from iOS and create organized
 - Node.js (v18+)
 - Obsidian vault organized with PARA method
 - Google AI API key (free tier available at https://makersuite.google.com/app/apikey)
+- **Google Custom Search Engine ID** (optional, for auto-research feature - free 100 searches/day at https://programmablesearchengine.google.com/)
 
 ## Installation
 
@@ -195,6 +203,27 @@ Claude's extended context window enables RAG implementations without complex chu
 
 Directly applicable to current Alchemer Ash project which uses RAG for Slack bot. Could eliminate chunking complexity and improve response quality by leveraging full context windows.
 
+## Auto-Research
+
+**Search Query:** "RAG systems Claude API large context windows"
+
+### Related Resources
+
+1. **[Building Production RAG with Claude's Extended Context](https://anthropic.com/docs)**
+   - Comprehensive guide showing how to build RAG systems with 200K+ context windows
+   - Relevance: High (95%)
+   - Why: Directly demonstrates the implementation pattern mentioned in the tweet
+
+2. **[Context Window Optimization for RAG](https://simonwillison.net/2024)**
+   - Performance benchmarks comparing chunking vs full-context approaches
+   - Relevance: High (88%)
+   - Why: Provides data to validate the "no more chunking" claim
+
+3. **[Claude API Best Practices for Long Documents](https://docs.anthropic.com)**
+   - Official documentation on handling large context windows efficiently
+   - Relevance: Medium (75%)
+   - Why: Essential reference for implementing similar solutions
+
 ## Related Notes
 
 -
@@ -251,6 +280,53 @@ CONFIDENCE_THRESHOLD=0.7  # Default (recommended: 0.6 - 0.8)
 - 0.75 = Pretty clear (e.g., technical insight that's clearly a resource)
 - 0.55 = Uncertain (e.g., could be interesting but not clearly relevant)
 - 0.30 = Very unclear (e.g., random meme, off-topic content)
+
+### Auto-Research Feature
+
+The processor can automatically search the web for resources related to each tweet and include findings in your notes.
+
+**How it works:**
+1. AI generates an optimal search query based on tweet content and tags
+2. Searches the web using Google Custom Search API (100 free searches/day)
+3. AI filters and ranks results by relevance to your interests
+4. Top results added to note with summaries and relevance scores
+
+**Setup:**
+1. Create a Google Custom Search Engine:
+   - Go to https://programmablesearchengine.google.com/
+   - Click "Add" to create a new search engine
+   - Select "Search the entire web"
+   - Copy your Search Engine ID
+2. Add to `.env`:
+   ```bash
+   GOOGLE_SEARCH_ENGINE_ID=your_search_engine_id_here
+   ```
+
+**Configuration:**
+```bash
+# Enable/disable feature
+ENABLE_AUTO_RESEARCH=true
+
+# Number of results to fetch (3-10 recommended)
+MAX_RESEARCH_RESULTS=5
+
+# Minimum relevance score to include (0.5-0.8 recommended)
+RESEARCH_RELEVANCE_THRESHOLD=0.6
+```
+
+**Benefits:**
+- Automatically discovers related articles, tutorials, documentation
+- Saves time manually searching for related content
+- AI ensures only relevant resources are included
+- Creates a richer knowledge base with external references
+
+**Costs:**
+- Google Custom Search API: **Free** for up to 100 searches/day
+- Processing 2 tweets/day = ~60 searches/month (well within free tier)
+- Paid tier: $5 per 1,000 additional searches if needed
+
+**To disable:**
+Set `ENABLE_AUTO_RESEARCH=false` in `.env` or leave `GOOGLE_SEARCH_ENGINE_ID` empty.
 
 ### AI Provider Configuration
 
@@ -313,6 +389,15 @@ The rest of the code (screenshot finding, note generation, logging) remains unch
 - **Paid:** ~$0.000125 per image
 - **Monthly cost (60 tweets):** ~$0.0075 (essentially free)
 
+### Google Custom Search API (Auto-Research)
+- **Free tier:** 100 searches/day
+- **Paid:** $5 per 1,000 searches
+- **Monthly cost (60 tweets):** FREE (well within free tier)
+
+### Total Monthly Cost (Current Setup)
+- **60 tweets/month:** Essentially FREE (under $0.01)
+- **200 tweets/month:** FREE for search, ~$0.025 for AI
+
 ### Claude Vision (Future)
 - **Cost:** ~$0.003 per image
 - **Monthly cost (60 tweets):** ~$0.18
@@ -350,13 +435,15 @@ Check processing results:
 
 ## Future Enhancements
 
+- [x] Auto-research with web search (IMPLEMENTED ✅)
 - [ ] Thread detection (multi-tweet threads)
 - [ ] Video thumbnail extraction
 - [ ] Bulk reprocessing of old screenshots
 - [ ] Custom categorization rules
 - [ ] Integration with Daily Notes
-- [ ] Auto-tagging based on content analysis
 - [ ] Duplicate detection
+- [ ] Vault-wide semantic search integration
+- [ ] Auto-linking to related notes in vault
 
 ## Related Projects
 

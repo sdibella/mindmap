@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const https = require('https');
 require('dotenv').config();
 
 // Configuration
@@ -21,14 +22,18 @@ const CONFIG = {
   processedMarkerFile: '.processed-xeets.json',
   confidenceThreshold: parseFloat(process.env.CONFIDENCE_THRESHOLD) || 0.7,
   aiProvider: process.env.AI_PROVIDER || 'gemini', // 'gemini' or 'claude'
-  dryRun: process.argv.includes('--dry-run')
+  dryRun: process.argv.includes('--dry-run'),
+  // Auto-research settings
+  enableAutoResearch: process.env.ENABLE_AUTO_RESEARCH !== 'false', // default true
+  maxResearchResults: parseInt(process.env.MAX_RESEARCH_RESULTS) || 5,
+  researchRelevanceThreshold: parseFloat(process.env.RESEARCH_RELEVANCE_THRESHOLD) || 0.6
 };
 
 // Initialize AI client based on provider
 let aiClient;
 if (CONFIG.aiProvider === 'gemini') {
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
-  aiClient = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
+  aiClient = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 } else if (CONFIG.aiProvider === 'claude') {
   // For future Claude implementation
   console.log('Claude provider not yet implemented. Please set AI_PROVIDER=gemini');
@@ -139,9 +144,176 @@ Tags should be technical topics, technologies, or themes (max 5 tags).`;
 }
 
 /**
+ * Generate optimal search query from tweet data using AI
+ */
+async function generateSearchQuery(tweetData) {
+  console.log(`  Generating search query...`);
+
+  const prompt = `Based on this tweet, generate an optimal web search query to find related articles, tutorials, and resources.
+
+Tweet content: "${tweetData.text}"
+Tags: ${tweetData.tags.join(', ')}
+Category: ${tweetData.category}
+
+Generate a concise search query (3-7 words) that will find the most relevant technical resources.
+Respond with ONLY the search query text, nothing else.`;
+
+  const result = await aiClient.generateContent(prompt);
+  const response = await result.response;
+  const searchQuery = response.text().trim().replace(/['"]/g, '');
+
+  console.log(`  Search query: "${searchQuery}"`);
+  return searchQuery;
+}
+
+/**
+ * Perform web search using Google Custom Search API
+ */
+async function performWebSearch(query) {
+  const googleApiKey = process.env.GOOGLE_API_KEY;
+  const searchEngineId = process.env.GOOGLE_SEARCH_ENGINE_ID;
+
+  if (!searchEngineId) {
+    console.log(`  ⚠️  GOOGLE_SEARCH_ENGINE_ID not set - skipping web search`);
+    console.log(`  To enable: Create a Custom Search Engine at https://programmablesearchengine.google.com/`);
+    return [];
+  }
+
+  return new Promise((resolve, reject) => {
+    const encodedQuery = encodeURIComponent(query);
+    const url = `https://www.googleapis.com/customsearch/v1?key=${googleApiKey}&cx=${searchEngineId}&q=${encodedQuery}&num=${CONFIG.maxResearchResults}`;
+
+    https.get(url, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const results = JSON.parse(data);
+          if (results.items) {
+            resolve(results.items.map(item => ({
+              title: item.title,
+              url: item.link,
+              snippet: item.snippet
+            })));
+          } else {
+            console.log(`  ⚠️  No search results found`);
+            resolve([]);
+          }
+        } catch (e) {
+          console.log(`  ⚠️  Search error: ${e.message}`);
+          resolve([]);
+        }
+      });
+    }).on('error', (e) => {
+      console.log(`  ⚠️  Search error: ${e.message}`);
+      resolve([]);
+    });
+  });
+}
+
+/**
+ * Filter and rank search results by relevance using AI
+ */
+async function filterResearchResults(searchResults, tweetData) {
+  if (searchResults.length === 0) return [];
+
+  console.log(`  Filtering ${searchResults.length} search results...`);
+
+  const prompt = `You are filtering web search results to find the most relevant resources for a software engineer.
+
+Tweet content: "${tweetData.text}"
+User interests: AI/LLM projects, knowledge management, web development
+Tags: ${tweetData.tags.join(', ')}
+
+Search results:
+${searchResults.map((r, i) => `${i + 1}. ${r.title}\n   ${r.snippet}\n   ${r.url}`).join('\n\n')}
+
+For each result, assign a relevance score (0.0-1.0) and brief explanation.
+Return ONLY valid JSON (no markdown, no code blocks):
+
+{
+  "results": [
+    {
+      "index": 1,
+      "relevance": 0.95,
+      "reason": "why this is relevant",
+      "summary": "one-sentence summary of what this resource offers"
+    }
+  ]
+}
+
+Only include results with relevance >= ${CONFIG.researchRelevanceThreshold}.
+Prioritize: technical depth, actionable insights, credible sources.`;
+
+  try {
+    const result = await aiClient.generateContent(prompt);
+    const response = await result.response;
+    let jsonText = response.text().trim();
+
+    if (jsonText.startsWith('```')) {
+      jsonText = jsonText.replace(/```json?\n?/g, '').replace(/```\n?$/g, '');
+    }
+
+    const filtered = JSON.parse(jsonText);
+
+    // Map back to original results with enriched data
+    const enrichedResults = filtered.results
+      .filter(r => r.relevance >= CONFIG.researchRelevanceThreshold)
+      .map(r => ({
+        ...searchResults[r.index - 1],
+        relevance: r.relevance,
+        reason: r.reason,
+        summary: r.summary
+      }))
+      .sort((a, b) => b.relevance - a.relevance);
+
+    console.log(`  ✓ Filtered to ${enrichedResults.length} relevant results`);
+    return enrichedResults;
+  } catch (e) {
+    console.log(`  ⚠️  Error filtering results: ${e.message}`);
+    // Return all results unfiltered if AI filtering fails
+    return searchResults.map(r => ({ ...r, relevance: 0.5, summary: r.snippet }));
+  }
+}
+
+/**
+ * Perform auto-research on tweet content
+ */
+async function performAutoResearch(tweetData) {
+  if (!CONFIG.enableAutoResearch) {
+    return null;
+  }
+
+  console.log(`  🔍 Auto-research enabled`);
+
+  try {
+    // Generate search query
+    const searchQuery = await generateSearchQuery(tweetData);
+
+    // Perform web search
+    const searchResults = await performWebSearch(searchQuery);
+
+    if (searchResults.length === 0) {
+      return { query: searchQuery, results: [] };
+    }
+
+    // Filter and rank results
+    const filteredResults = await filterResearchResults(searchResults, tweetData);
+
+    return {
+      query: searchQuery,
+      results: filteredResults
+    };
+  } catch (error) {
+    console.log(`  ⚠️  Auto-research error: ${error.message}`);
+    return null;
+  }
+}
+
+/**
  * Generate markdown note from tweet data
  */
-function generateNote(tweetData, screenshotPath) {
+function generateNote(tweetData, screenshotPath, researchData = null) {
   const today = new Date().toISOString().split('T')[0];
 
   const frontmatter = `---
@@ -155,6 +327,25 @@ category: ${tweetData.category}
 confidence: ${tweetData.confidence}
 screenshot: "[[${screenshotPath}]]"
 ---`;
+
+  // Build research section if available
+  let researchSection = '';
+  if (researchData && researchData.results && researchData.results.length > 0) {
+    researchSection = `\n## Auto-Research
+
+**Search Query:** "${researchData.query}"
+
+### Related Resources
+`;
+    researchData.results.forEach((result, idx) => {
+      const relevanceLabel = result.relevance >= 0.8 ? 'High' : result.relevance >= 0.6 ? 'Medium' : 'Low';
+      researchSection += `
+${idx + 1}. **[${result.title}](${result.url})**
+   - ${result.summary || result.snippet}
+   - Relevance: ${relevanceLabel} (${(result.relevance * 100).toFixed(0)}%)${result.reason ? '\n   - Why: ' + result.reason : ''}
+`;
+    });
+  }
 
   const content = `# ${tweetData.title}
 
@@ -175,6 +366,7 @@ ${tweetData.summary}
 ## Relevance
 
 ${tweetData.relevance}
+${researchSection}
 
 ## Related Notes
 
@@ -286,6 +478,7 @@ async function main() {
   console.log(`Vault: ${CONFIG.vaultPath}`);
   console.log(`AI Provider: ${CONFIG.aiProvider}`);
   console.log(`Confidence Threshold: ${CONFIG.confidenceThreshold} (xeets below this go to Inbox for review)`);
+  console.log(`Auto-Research: ${CONFIG.enableAutoResearch ? 'ENABLED' : 'DISABLED'}${CONFIG.enableAutoResearch ? ` (max ${CONFIG.maxResearchResults} results, ${CONFIG.researchRelevanceThreshold} relevance threshold)` : ''}`);
   console.log(`Mode: ${CONFIG.dryRun ? 'DRY RUN' : 'LIVE'}\n`);
 
   // Find new screenshots
@@ -314,8 +507,11 @@ async function main() {
       }
       console.log(`  Tags: ${tweetData.tags.join(', ')}`);
 
+      // Perform auto-research
+      const researchData = await performAutoResearch(tweetData);
+
       // Generate note
-      const noteContent = generateNote(tweetData, screenshot.relativePath);
+      const noteContent = generateNote(tweetData, screenshot.relativePath, researchData);
 
       // Save note
       const result = saveNote(tweetData, noteContent, screenshot);
