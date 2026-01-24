@@ -1,17 +1,17 @@
 {
-  "name": "tweet-processor",
-  "version": "1.0.0",
-  "description": "Process tweet screenshots and create organized Obsidian notes using AI vision",
-  "main": "process-tweets.js",
+  "name": "xeet-link-processor",
+  "version": "3.0.0",
+  "description": "Fetch X.com links from Obsidian vault for Claude Code processing",
+  "main": "fetch-tweets.js",
   "scripts": {
-    "process": "node process-tweets.js",
-    "test": "node process-tweets.js --dry-run"
+    "fetch": "node fetch-tweets.js"
   },
-  "keywords": ["obsidian", "tweets", "automation", "gemini", "vision-ai"],
+  "keywords": ["obsidian", "twitter", "x.com", "automation", "claude"],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@google/generative-ai": "^0.21.0",
-    "dotenv": "^16.4.5"
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0"
   }
 }
