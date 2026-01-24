@@ -5,7 +5,9 @@
   "main": "fetch-tweets.js",
   "scripts": {
     "fetch": "node fetch-tweets.js",
-    "scan-folders": "node scan-vault-folders.js"
+    "scan-folders": "node scan-vault-folders.js",
+    "check-processed": "node check-processed.js",
+    "mark-processed": "node mark-processed.js"
   },
   "keywords": ["obsidian", "twitter", "x.com", "automation", "claude"],
   "author": "",
