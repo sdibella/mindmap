@@ -5,6 +5,7 @@
   "main": "fetch-tweets.js",
   "scripts": {
     "fetch": "node fetch-tweets.js",
+    "fetch-bookmarks": "node fetch-bookmarks.js",
     "scan-folders": "node scan-vault-folders.js",
     "check-processed": "node check-processed.js",
     "mark-processed": "node mark-processed.js"

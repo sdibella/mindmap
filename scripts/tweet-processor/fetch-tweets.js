@@ -13,6 +13,24 @@ const { chromium } = require('playwright');
 const VAULT_PATH = process.env.VAULT_PATH || path.join(process.env.HOME, 'Library/Mobile Documents/iCloud~md~obsidian/Documents/StefanEternal');
 
 /**
+ * Load bookmarked tweet URLs from bookmarked-urls.json
+ */
+function loadBookmarkedLinks() {
+  const bookmarksPath = path.join(__dirname, 'bookmarked-urls.json');
+  if (!fs.existsSync(bookmarksPath)) {
+    return null;
+  }
+
+  const bookmarks = JSON.parse(fs.readFileSync(bookmarksPath, 'utf-8'));
+  return bookmarks.map(b => ({
+    url: b.url,
+    baseUrl: b.baseUrl,
+    files: ['bookmarks'],
+    firstSeen: 'bookmarks'
+  }));
+}
+
+/**
  * Scan vault for X.com and twitter.com links
  */
 function scanVaultForLinks() {
@@ -138,10 +156,19 @@ async function fetchTweetContent(context, url) {
 async function main() {
   console.log('🔗 X.com Tweet Fetcher\n');
 
-  // Scan for links
-  console.log('Scanning vault for X.com/Twitter links...');
-  const links = scanVaultForLinks();
-  console.log(`Found ${links.length} tweet link(s)\n`);
+  // Try bookmarks first, then fall back to vault scan
+  let links;
+  const bookmarkedLinks = loadBookmarkedLinks();
+
+  if (bookmarkedLinks) {
+    console.log('📚 Loading bookmarked tweets...');
+    links = bookmarkedLinks;
+    console.log(`Found ${links.length} bookmarked tweet(s)\n`);
+  } else {
+    console.log('Scanning vault for X.com/Twitter links...');
+    links = scanVaultForLinks();
+    console.log(`Found ${links.length} tweet link(s)\n`);
+  }
 
   if (links.length === 0) {
     console.log('No links found in vault.');
