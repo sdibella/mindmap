@@ -4,7 +4,8 @@
   "description": "Fetch X.com links from Obsidian vault for Claude Code processing",
   "main": "fetch-tweets.js",
   "scripts": {
-    "fetch": "node fetch-tweets.js"
+    "fetch": "node fetch-tweets.js",
+    "scan-folders": "node scan-vault-folders.js"
   },
   "keywords": ["obsidian", "twitter", "x.com", "automation", "claude"],
   "author": "",
