@@ -78,17 +78,45 @@ async function fetchTweetContent(context, url) {
 
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(3000);
 
-    const textContent = await page.textContent('body');
+    // Wait for tweet content to load (article element contains tweets)
+    try {
+      await page.waitForSelector('article', { timeout: 8000 });
+      await page.waitForTimeout(2000); // Extra wait for content to render
+    } catch (e) {
+      // If no article found, might be login wall or error
+    }
 
+    // Check for login wall
     const hasLoginWall = await page.locator('text=Sign in to X').count() > 0 ||
                          await page.locator('text=Log in to X').count() > 0 ||
                          await page.locator('text=Don\'t miss what\'s happening').count() > 0;
 
+    if (hasLoginWall) {
+      return {
+        url: url,
+        accessible: false,
+        error: 'Login wall detected',
+        timestamp: new Date().toISOString()
+      };
+    }
+
+    // Extract tweet content from article elements
+    const textContent = await page.evaluate(() => {
+      const articles = document.querySelectorAll('article');
+      let content = '';
+      articles.forEach((article, i) => {
+        const text = article.innerText || article.textContent;
+        if (i === 0) {
+          content = text; // Main tweet is first article
+        }
+      });
+      return content || document.body.innerText;
+    });
+
     return {
       url: url,
-      accessible: !hasLoginWall,
+      accessible: true,
       content: textContent,
       timestamp: new Date().toISOString()
     };
