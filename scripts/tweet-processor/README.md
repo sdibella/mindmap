@@ -1,468 +1,75 @@
-# Xeet Screenshot Processor
+# X.com Authenticated Tweet Fetcher
 
-Automatically process X (Twitter) post screenshots from iOS and create organized, categorized notes in your Obsidian vault using AI vision.
+Simple authenticated scraper that fetches tweet content from links in your Obsidian vault. Designed to work with Claude Code for AI-powered processing and organization.
 
-## Features
+## Architecture
 
-- Extracts text, author, dates, and engagement metrics from X post screenshots
-- Uses AI (Gemini Flash or Claude Vision) to categorize and summarize xeets
-- **Confidence-based routing** - uncertain categorizations go to Inbox for manual review
-- **Auto-research** - automatically searches the web for related articles and resources
-- **AI-powered relevance filtering** - ranks and filters search results by relevance to your interests
-- Auto-generates formatted markdown notes in your PARA-organized Obsidian vault
-- Supports both manual execution and automated cron scheduling
-- Easy to switch between AI providers (currently: Gemini, future: Claude)
+**Tweet Fetcher (Node.js):**
+- Scans vault for X.com/Twitter links
+- Uses Playwright with cookies for authentication
+- Fetches raw tweet content
+- Returns JSON for Claude Code processing
 
-## How It Works
+**Claude Code (AI Processing):**
+- Analyzes tweet content
+- Categorizes and routes to folders
+- Generates formatted notes
+- Handles all intelligent decisions
 
-```
-1. Screenshot xeet on iOS
-2. Share to Obsidian → Attachments/Xeets/
-3. Run processor (manual or cron)
-4. AI analyzes screenshot and assigns confidence score
-5. Auto-research (NEW):
-   - AI generates optimal search query from tweet content
-   - Searches web for related articles/resources
-   - AI filters and ranks results by relevance
-   - Adds top results to note with summaries
-6. Routes to appropriate folder:
-   - High confidence (≥0.7) → Resources or Projects
-   - Low confidence (<0.7) → Inbox for manual review
-7. Creates organized note with AI insights + research findings
-8. Logs to processing history
-```
-
-## Prerequisites
-
-- Node.js (v18+)
-- Obsidian vault organized with PARA method
-- Google AI API key (free tier available at https://makersuite.google.com/app/apikey)
-- **Google Custom Search Engine ID** (optional, for auto-research feature - free 100 searches/day at https://programmablesearchengine.google.com/)
-
-## Installation
+## Quick Start
 
 ### 1. Install Dependencies
 
 ```bash
-cd tweet-processor
 npm install
 ```
 
-### 2. Configure Environment
+### 2. Set Up Authentication
+
+Follow `COOKIE_SETUP.md` to export your X.com cookies to `.cookies.json`.
+
+### 3. Fetch Tweets
 
 ```bash
-# Copy example environment file
-cp .env.example .env
-
-# Edit .env and add your Google AI API key
-nano .env
+npm run fetch
 ```
 
-**Required settings in `.env`:**
-```bash
-GOOGLE_API_KEY=your_google_ai_api_key_here
-VAULT_PATH=/Users/gw/Library/Mobile Documents/iCloud~md~obsidian/Documents/StefanEternal
-AI_PROVIDER=gemini
-```
+This creates `fetched-tweets.json` with all tweet content.
 
-### 3. Get Your Google AI API Key
+### 4. Process with Claude Code
 
-1. Go to https://makersuite.google.com/app/apikey
-2. Click "Create API Key"
-3. Copy the key and paste it into `.env`
+Open Claude Code in this directory and ask:
 
-## Usage
+> "Process the fetched tweets and organize them into my vault"
 
-### Manual Execution
+Claude Code will:
+- Analyze each tweet
+- Determine category and topic
+- Match to existing folders or create new ones
+- Generate formatted markdown notes
+- Link to related projects
+- Save to appropriate PARA locations
 
-Run the processor manually:
+## Available Scripts
 
-```bash
-# Process all new screenshots
-npm run process
+- `npm run fetch` - Scan vault and fetch tweet content
+- `npm run scan-folders` - List existing vault folders
+- `npm run check-processed` - Show unprocessed tweets
+- `npm run mark-processed <url>` - Mark a URL as processed
 
-# Dry run (preview without making changes)
-npm run test
-```
+## Files
 
-### As a Claude Code Skill
+- `fetched-tweets.json` - Raw tweet content (generated)
+- `.processed-links.json` - Tracking file (generated)
+- `.cookies.json` - Your auth cookies (not in git)
 
-Add this as a slash command in Claude Code:
+## Workflow
 
-**Option A: Using the skill script**
-```bash
-# In Claude Code, run:
-# (This assumes you have skills set up in your Claude Code config)
-/process-tweets
-```
+1. Run `npm run fetch` to get tweet content
+2. Ask Claude Code to process and organize
+3. Review the created notes
+4. Repeat as needed
 
-**Option B: Direct execution from Claude Code**
-Just ask Claude Code:
-```
-"Run the tweet processor in ~/Workspace/mindmap/tweet-processor"
-```
+## Security
 
-### Automated with Cron
-
-Run automatically every night at 2 AM:
-
-```bash
-# Edit crontab
-crontab -e
-
-# Add this line:
-0 2 * * * cd /Users/gw/Workspace/mindmap/tweet-processor && /usr/local/bin/node process-tweets.js >> ~/logs/tweet-processor.log 2>&1
-```
-
-**Using PM2 (recommended for better process management):**
-
-```bash
-# Install PM2
-npm install -g pm2
-
-# Run with cron schedule
-pm2 start process-tweets.js --cron "0 2 * * *" --name tweet-processor
-
-# Save PM2 configuration
-pm2 save
-pm2 startup
-```
-
-## How to Use
-
-### 1. Capture Tweets on iOS
-
-When you see a tweet you want to save:
-1. Take a screenshot (side button + volume up)
-2. Tap the screenshot thumbnail
-3. Share → Obsidian → Save to `Attachments/Xeets/`
-
-### 2. Process Screenshots
-
-Run manually or wait for cron:
-```bash
-npm run process
-```
-
-### 3. Review Generated Notes
-
-The processor will create notes in:
-- **Resources:** `03 - Resources/X Insights/` (for learning/reference tweets)
-- **Project Ideas:** `01 - Projects/Ideas/` (for tweets that inspire projects)
-
-Each note includes:
-- Extracted tweet text
-- Author information
-- Engagement metrics (likes, retweets, replies)
-- AI-generated summary and insights
-- Suggested tags
-- Link to original screenshot
-
-### 4. Check Processing Log
-
-View processing history:
-```
-00 - Inbox/Tweet Processing Log.md
-```
-
-## Output Example
-
-**Generated note:** `03 - Resources/X Insights/building-rag-systems-with-claude.md`
-
-```markdown
----
-created: 2026-01-05
-source: twitter
-author: @swyx
-author_name: Shawn Wang
-tags: ["ai", "rag", "claude", "llm"]
-category: resource
-confidence: 0.92
-screenshot: "[[Attachments/Xeets/IMG_1234.png]]"
----
-
-# Building RAG Systems with Claude
-
-**Author:** Shawn Wang (@swyx)
-**Date:** 2026-01-04
-**Engagement:** 1.2K ❤️ · 234 🔄 · 89 💬
-
-## Tweet Content
-
-> Just shipped a RAG system using Claude's 200K context window.
-> Game changer for technical documentation search.
-> No more chunking headaches! 🚀
-
-![[Attachments/Xeets/IMG_1234.png]]
-
-## Key Insights
-
-Claude's extended context window enables RAG implementations without complex chunking strategies, simplifying architecture for documentation search systems.
-
-## Relevance
-
-Directly applicable to current Alchemer Ash project which uses RAG for Slack bot. Could eliminate chunking complexity and improve response quality by leveraging full context windows.
-
-## Auto-Research
-
-**Search Query:** "RAG systems Claude API large context windows"
-
-### Related Resources
-
-1. **[Building Production RAG with Claude's Extended Context](https://anthropic.com/docs)**
-   - Comprehensive guide showing how to build RAG systems with 200K+ context windows
-   - Relevance: High (95%)
-   - Why: Directly demonstrates the implementation pattern mentioned in the tweet
-
-2. **[Context Window Optimization for RAG](https://simonwillison.net/2024)**
-   - Performance benchmarks comparing chunking vs full-context approaches
-   - Relevance: High (88%)
-   - Why: Provides data to validate the "no more chunking" claim
-
-3. **[Claude API Best Practices for Long Documents](https://docs.anthropic.com)**
-   - Official documentation on handling large context windows efficiently
-   - Relevance: Medium (75%)
-   - Why: Essential reference for implementing similar solutions
-
-## Related Notes
-
--
-
----
-**Captured from:** [[00 - Inbox/📥 Quick Capture|Quick Capture]]
-**Screenshot:** [[Attachments/Xeets/IMG_1234.png]]
-```
-
-## Configuration
-
-### Vault Structure
-
-The processor expects this PARA structure:
-```
-StefanEternal/
-├── 00 - Inbox/
-│   ├── Xeets to Review/ (low-confidence xeets for manual review)
-│   └── Xeet Processing Log.md (auto-generated)
-├── 01 - Projects/
-│   └── Ideas/ (high-confidence project-idea xeets)
-├── 03 - Resources/
-│   └── X Insights/ (high-confidence resource xeets)
-└── Attachments/
-    └── Xeets/ (put screenshots here)
-```
-
-### Confidence-Based Routing
-
-The processor uses AI confidence scoring to ensure quality categorization:
-
-**How it works:**
-1. AI analyzes the screenshot and assigns a confidence score (0.0 - 1.0)
-2. High confidence (≥0.7) → Automatically filed in Resources or Projects
-3. Low confidence (<0.7) → Routed to `00 - Inbox/Xeets to Review/` for manual review
-
-**Why this matters:**
-- Prevents miscategorization of ambiguous tweets
-- Catches tweets that might not be relevant to your work
-- Integrates with your weekly inbox review workflow
-- You make the final decision on uncertain items
-
-**Adjusting the threshold:**
-Edit `.env` to change sensitivity:
-```bash
-CONFIDENCE_THRESHOLD=0.7  # Default (recommended: 0.6 - 0.8)
-```
-
-- Lower (0.6) = More automatic filing, some miscategorizations
-- Higher (0.8) = More manual review, fewer mistakes
-
-**Example confidence scores:**
-- 0.95 = Crystal clear (e.g., "Here's a tutorial on building RAG systems")
-- 0.75 = Pretty clear (e.g., technical insight that's clearly a resource)
-- 0.55 = Uncertain (e.g., could be interesting but not clearly relevant)
-- 0.30 = Very unclear (e.g., random meme, off-topic content)
-
-### Auto-Research Feature
-
-The processor can automatically search the web for resources related to each tweet and include findings in your notes.
-
-**How it works:**
-1. AI generates an optimal search query based on tweet content and tags
-2. Searches the web using Google Custom Search API (100 free searches/day)
-3. AI filters and ranks results by relevance to your interests
-4. Top results added to note with summaries and relevance scores
-
-**Setup:**
-1. Create a Google Custom Search Engine:
-   - Go to https://programmablesearchengine.google.com/
-   - Click "Add" to create a new search engine
-   - Select "Search the entire web"
-   - Copy your Search Engine ID
-2. Add to `.env`:
-   ```bash
-   GOOGLE_SEARCH_ENGINE_ID=your_search_engine_id_here
-   ```
-
-**Configuration:**
-```bash
-# Enable/disable feature
-ENABLE_AUTO_RESEARCH=true
-
-# Number of results to fetch (3-10 recommended)
-MAX_RESEARCH_RESULTS=5
-
-# Minimum relevance score to include (0.5-0.8 recommended)
-RESEARCH_RELEVANCE_THRESHOLD=0.6
-```
-
-**Benefits:**
-- Automatically discovers related articles, tutorials, documentation
-- Saves time manually searching for related content
-- AI ensures only relevant resources are included
-- Creates a richer knowledge base with external references
-
-**Costs:**
-- Google Custom Search API: **Free** for up to 100 searches/day
-- Processing 2 tweets/day = ~60 searches/month (well within free tier)
-- Paid tier: $5 per 1,000 additional searches if needed
-
-**To disable:**
-Set `ENABLE_AUTO_RESEARCH=false` in `.env` or leave `GOOGLE_SEARCH_ENGINE_ID` empty.
-
-### AI Provider Configuration
-
-**Current: Gemini Flash (Free Credits)**
-```bash
-AI_PROVIDER=gemini
-GOOGLE_API_KEY=your_key
-```
-
-**Future: Claude Vision (Better Categorization)**
-
-When you're ready to switch to Claude:
-
-1. Get Anthropic API key from https://console.anthropic.com/
-2. Update `.env`:
-   ```bash
-   AI_PROVIDER=claude
-   ANTHROPIC_API_KEY=your_claude_key
-   ```
-3. Install Claude SDK:
-   ```bash
-   npm install @anthropic-ai/sdk
-   ```
-4. Update `process-tweets.js` (see section below)
-
-## Switching from Gemini to Claude
-
-The code is structured to make switching easy. When ready:
-
-1. Uncomment the Claude client initialization in `process-tweets.js` (lines ~40-45)
-2. Implement `analyzeScreenshotClaude()` function (similar to existing Gemini function)
-3. Update `.env` to use `AI_PROVIDER=claude`
-
-The rest of the code (screenshot finding, note generation, logging) remains unchanged.
-
-## Troubleshooting
-
-### No screenshots found
-- Check that screenshots are in `Attachments/Xeets/` folder
-- Ensure vault path is correct in `.env`
-
-### API errors
-- Verify API key is correct
-- Check you have free credits remaining (https://makersuite.google.com/)
-- Try with `--dry-run` to test without API calls
-
-### Permission errors
-- Ensure script has read/write access to vault directory
-- Check Obsidian isn't locking files (close vault if needed)
-
-### Cron not running
-- Check cron logs: `tail -f ~/logs/tweet-processor.log`
-- Verify node path: `which node`
-- Test manual execution first
-
-## Cost Estimates
-
-### Gemini Flash (Current)
-- **Free tier:** 1,500 requests/day
-- **Paid:** ~$0.000125 per image
-- **Monthly cost (60 tweets):** ~$0.0075 (essentially free)
-
-### Google Custom Search API (Auto-Research)
-- **Free tier:** 100 searches/day
-- **Paid:** $5 per 1,000 searches
-- **Monthly cost (60 tweets):** FREE (well within free tier)
-
-### Total Monthly Cost (Current Setup)
-- **60 tweets/month:** Essentially FREE (under $0.01)
-- **200 tweets/month:** FREE for search, ~$0.025 for AI
-
-### Claude Vision (Future)
-- **Cost:** ~$0.003 per image
-- **Monthly cost (60 tweets):** ~$0.18
-
-## Development
-
-### Project Structure
-```
-tweet-processor/
-├── process-tweets.js          # Main script
-├── package.json               # Dependencies
-├── .env                       # Configuration (not in git)
-├── .env.example               # Example configuration
-├── .processed-tweets.json     # Tracking file (auto-generated)
-├── process-tweets.skill.sh    # Claude Code skill wrapper
-└── README.md                  # This file
-```
-
-### Testing
-
-```bash
-# Dry run - preview without changes
-npm run test
-
-# Process a single screenshot manually
-node process-tweets.js
-```
-
-### Logs
-
-Check processing results:
-- **Obsidian:** `00 - Inbox/Tweet Processing Log.md`
-- **Cron logs:** `~/logs/tweet-processor.log`
-- **Processed tracking:** `.processed-tweets.json`
-
-## Future Enhancements
-
-- [x] Auto-research with web search (IMPLEMENTED ✅)
-- [ ] Thread detection (multi-tweet threads)
-- [ ] Video thumbnail extraction
-- [ ] Bulk reprocessing of old screenshots
-- [ ] Custom categorization rules
-- [ ] Integration with Daily Notes
-- [ ] Duplicate detection
-- [ ] Vault-wide semantic search integration
-- [ ] Auto-linking to related notes in vault
-
-## Related Projects
-
-This tool complements your Alchemer sprint:
-- **Ash Slackbot:** Similar AI-powered content processing
-- **Claude API Survey Builder:** Reusable Claude API patterns
-- **Chrome Extension:** Could capture tweets directly from browser
-
-## License
-
-MIT
-
-## Support
-
-For issues or questions:
-1. Check `Tweet Processing Log.md` in your vault
-2. Run with `--dry-run` to debug
-3. Review logs in `~/logs/tweet-processor.log`
-
----
-
-**Built for the PARA method** | **Powered by Gemini Flash** | **Ready for Claude Vision**
+Never commit `.cookies.json` - it contains authentication credentials.
