@@ -3,3 +3,6 @@ node_modules/
 .processed-tweets.json
 *.log
 .DS_Store
+.cookies.json
+pilot-results.json
+fetched-tweets.json
