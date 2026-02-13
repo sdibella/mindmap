@@ -5,9 +5,9 @@
   "main": "fetch-tweets.js",
   "scripts": {
     "fetch": "node fetch-tweets.js",
-    "fetch-bird": "bash fetch-bookmarks-bird.sh && node fetch-tweets-bird.js",
+    "fetch-bird": "bash fetch-bookmarks-bird.sh",
     "fetch-bookmarks": "node fetch-bookmarks.js",
-    "fetch-bookmarks-bird": "bash fetch-bookmarks-bird.sh",
+    "pipeline": "bash fetch-bookmarks-bird.sh && node process-tweets.js",
     "scan-folders": "node scan-vault-folders.js",
     "check-processed": "node check-processed.js",
     "mark-processed": "node mark-processed.js",
