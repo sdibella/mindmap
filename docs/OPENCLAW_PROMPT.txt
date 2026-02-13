@@ -1,0 +1,177 @@
+════════════════════════════════════════════════════════════════════════════════
+OPENCLAW VAULT INTELLIGENCE SYSTEM - DEPLOYMENT PROMPT
+════════════════════════════════════════════════════════════════════════════════
+
+📋 MISSION:
+Set up and maintain the OPENCLAW Vault Intelligence System for continuous
+categorization, backlinking, and learning of all StefanEternal vault content.
+
+════════════════════════════════════════════════════════════════════════════════
+🚀 QUICK DEPLOYMENT (5 MINUTES)
+════════════════════════════════════════════════════════════════════════════════
+
+1. MAKE SCRIPTS EXECUTABLE:
+   cd /Users/gw/Workspace/mindmap/scripts/tweet-processor
+   chmod +x vault-intelligence-engine.py weekly-review.py monthly-synthesis.py
+
+2. INSTALL CRON JOBS:
+   crontab -e
+
+   Copy and paste these three lines:
+
+   0 2 * * * cd /Users/gw/Workspace/mindmap/scripts/tweet-processor && python3 vault-intelligence-engine.py --report > /tmp/openclaw-nightly.log 2>&1
+   0 8 * * 1 cd /Users/gw/Workspace/mindmap/scripts/tweet-processor && python3 weekly-review.py >> /tmp/openclaw-weekly.log 2>&1
+   0 9 1 * * cd /Users/gw/Workspace/mindmap/scripts/tweet-processor && python3 monthly-synthesis.py >> /tmp/openclaw-monthly.log 2>&1
+
+   Save and exit.
+
+3. VERIFY:
+   crontab -l
+
+4. TEST:
+   python3 vault-intelligence-engine.py --report
+   python3 weekly-review.py
+   python3 monthly-synthesis.py
+
+✅ DEPLOYED!
+
+════════════════════════════════════════════════════════════════════════════════
+📅 YOUR ONGOING SCHEDULE
+════════════════════════════════════════════════════════════════════════════════
+
+🌙 NIGHTLY (2 AM - Autonomous):
+   - Categorizes all vault files using OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md
+   - Analyzes similarity and generates backlinks
+   - Output: vault-metadata.json
+   - You: Check /tmp/openclaw-nightly.log occasionally
+
+📋 WEEKLY (Monday 8 AM - Autonomous):
+   - Surfaces low-confidence items and edge cases
+   - Detects emerging patterns
+   - Output: WEEKLY_REVIEW.md
+   - You: Read and note observations (5 minutes)
+
+📊 MONTHLY (1st of month, 9 AM - Autonomous + Your Action):
+   - Deep analysis and learning
+   - Proposes protocol updates
+   - Output: MONTHLY_SYNTHESIS.md
+   - You: Review, approve updates to protocol (15 minutes)
+
+════════════════════════════════════════════════════════════════════════════════
+📂 KEY FILES
+════════════════════════════════════════════════════════════════════════════════
+
+READ THESE:
+  - docs/OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md     (Master rules)
+  - docs/OPENCLAW_INSTRUCTIONS.md                     (Quick reference)
+  - docs/OPENCLAW_AUTOMATION_SETUP.md                 (Detailed guide)
+  - docs/OPENCLAW_SYSTEM_COMPLETE.md                  (Project summary)
+
+SCRIPTS:
+  - scripts/tweet-processor/vault-intelligence-engine.py
+  - scripts/tweet-processor/weekly-review.py
+  - scripts/tweet-processor/monthly-synthesis.py
+
+OUTPUTS:
+  - scripts/tweet-processor/vault-metadata.json        (Generated nightly)
+  - scripts/tweet-processor/WEEKLY_REVIEW.md           (Generated weekly)
+  - scripts/tweet-processor/MONTHLY_SYNTHESIS.md       (Generated monthly)
+  - docs/syntheses/MONTHLY_SYNTHESIS_YYYY_MM.md        (Archives)
+
+════════════════════════════════════════════════════════════════════════════════
+✅ YOUR MONTHLY WORKFLOW
+════════════════════════════════════════════════════════════════════════════════
+
+Monday (After weekly review):
+  1. Read scripts/tweet-processor/WEEKLY_REVIEW.md
+  2. Note any patterns or anomalies
+
+1st of Month (After monthly synthesis):
+  1. Read scripts/tweet-processor/MONTHLY_SYNTHESIS.md
+  2. Review proposed protocol updates
+  3. Edit docs/OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md:
+     - Update patterns/rules based on findings
+     - Add new categories if needed
+     - Update Evolution Log section
+     - Increment version number
+  4. Archive: cp MONTHLY_SYNTHESIS.md docs/syntheses/MONTHLY_SYNTHESIS_$(date +%Y_%m).md
+  5. Continue to next month
+
+════════════════════════════════════════════════════════════════════════════════
+🔧 MONITORING
+════════════════════════════════════════════════════════════════════════════════
+
+Daily check (30 seconds):
+  ls -lah /Users/gw/Workspace/mindmap/scripts/tweet-processor/vault-metadata.json
+  tail -10 /tmp/openclaw-nightly.log
+
+Weekly check (5 minutes):
+  cat /Users/gw/Workspace/mindmap/scripts/tweet-processor/WEEKLY_REVIEW.md
+
+Monthly check (15 minutes):
+  cat /Users/gw/Workspace/mindmap/scripts/tweet-processor/MONTHLY_SYNTHESIS.md
+
+════════════════════════════════════════════════════════════════════════════════
+🆘 TROUBLESHOOTING
+════════════════════════════════════════════════════════════════════════════════
+
+Scripts not running:
+  1. Check: crontab -l
+  2. Check logs: tail -50 /tmp/openclaw-nightly.log
+  3. Test manually: cd scripts/tweet-processor && python3 vault-intelligence-engine.py
+
+Metadata not updating:
+  1. Verify: ls -la vault-metadata.json
+  2. Check: python3 --version (should be 3.6+)
+  3. Run: python3 vault-intelligence-engine.py --report
+
+See docs/OPENCLAW_AUTOMATION_SETUP.md for detailed troubleshooting.
+
+════════════════════════════════════════════════════════════════════════════════
+🎯 SUCCESS CRITERIA (After 30 Days)
+════════════════════════════════════════════════════════════════════════════════
+
+✅ Nightly runs consistently (check logs)
+✅ Weekly reviews surface insights (read weekly report)
+✅ Monthly synthesis improves protocol (make updates)
+✅ Vault feels better organized (visual in Obsidian)
+✅ Backlinks make sense (meaningful connections)
+✅ You understand everything (documentation clear)
+
+════════════════════════════════════════════════════════════════════════════════
+📞 QUESTIONS?
+════════════════════════════════════════════════════════════════════════════════
+
+"How do I set this up?"
+  → docs/OPENCLAW_INSTRUCTIONS.md (quick) or OPENCLAW_AUTOMATION_SETUP.md (detailed)
+
+"How does it work?"
+  → docs/OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md (the rules)
+
+"Something broke?"
+  → Troubleshooting section above or OPENCLAW_AUTOMATION_SETUP.md
+
+"How do I change the schedule?"
+  → OPENCLAW_AUTOMATION_SETUP.md → Customization section
+
+════════════════════════════════════════════════════════════════════════════════
+🚀 NEXT STEPS
+════════════════════════════════════════════════════════════════════════════════
+
+1. ✅ Follow "QUICK DEPLOYMENT" above (5 minutes)
+2. ✅ Test each script manually
+3. ✅ Verify cron installation
+4. ✅ Wait for first nightly run (2 AM)
+5. ✅ Review first weekly report (Monday 8 AM)
+6. ✅ Approve first monthly synthesis (next month 1st)
+7. ✅ Enjoy your intelligent vault!
+
+════════════════════════════════════════════════════════════════════════════════
+
+Status: READY FOR DEPLOYMENT ✅
+Version: 1.0
+Created: 2026-02-13
+System: OPENCLAW Vault Intelligence
+Vault: StefanEternal
+
+════════════════════════════════════════════════════════════════════════════════
