@@ -1,0 +1,3428 @@
+{
+  "10-apps-800k-revenue-guide": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@ErnestoSOFTWARE\"",
+    "filename": "10-apps-800k-revenue-guide.md"
+  },
+  "100000-on-copy-trading-blueprint": {
+    "suggested_tags": [
+      "prediction-markets",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@DextersSolab",
+    "filename": "100000-on-copy-trading-blueprint.md"
+  },
+  "100x-business-with-ai-agents": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@vasuman\"",
+    "filename": "100x-business-with-ai-agents.md"
+  },
+  "2026-stock-predictions-pltr-hims-amd": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@CMDarnton0\"",
+    "filename": "2026-stock-predictions-pltr-hims-amd.md"
+  },
+  "5-features-anthropic-shipped-with-opus-46-nobody-is-talking-": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@jumperz",
+    "filename": "5-features-anthropic-shipped-with-opus-46-nobody-is-talking-.md"
+  },
+  "50k-dividend-portfolio-35k-annual-income": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@HighYieldHustle\"",
+    "filename": "50k-dividend-portfolio-35k-annual-income.md"
+  },
+  "adam-townsend": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@adamscrabble",
+    "filename": "adam-townsend.md"
+  },
+  "agent-automation": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@MervinPraison",
+    "filename": "agent-automation.md"
+  },
+  "agent-native-software-design-guide": {
+    "suggested_tags": [
+      "ai-agents",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@danshipper\"",
+    "filename": "agent-native-software-design-guide.md"
+  },
+  "agent-native-software-design": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[ai-agents",
+      "architecture",
+      "agent-native]"
+    ],
+    "author": "",
+    "filename": "agent-native-software-design.md"
+  },
+  "agent-patterns-solo-parallel-collaborative": {
+    "suggested_tags": [
+      "ai-agents",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[ai-agents",
+      "architecture",
+      "patterns]"
+    ],
+    "author": "",
+    "filename": "agent-patterns-solo-parallel-collaborative.md"
+  },
+  "agent-skills-creation-best-practices": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@donvito\"",
+    "filename": "agent-skills-creation-best-practices.md"
+  },
+  "ai-job-career-guide": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "ai-job-career-guide.md"
+  },
+  "ai-memory-gpu-shortage": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "ai-memory-gpu-shortage.md"
+  },
+  "ai-native-knowledge-base": {
+    "suggested_tags": [
+      "ai-agents",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[ai",
+      "agent",
+      "memory",
+      "structure]"
+    ],
+    "author": "",
+    "filename": "ai-native-knowledge-base.md"
+  },
+  "ai-stack-best-positioned-stocks": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@InvestingVisual\"",
+    "filename": "ai-stack-best-positioned-stocks.md"
+  },
+  "alex-penunuri": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@penunurialex",
+    "filename": "alex-penunuri.md"
+  },
+  "alright-heres-my-most-powerful-vibe-coding-prompt-ever": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@milesdeutscher",
+    "filename": "alright-heres-my-most-powerful-vibe-coding-prompt-ever.md"
+  },
+  "ankur-nagpal": {
+    "suggested_tags": [
+      "software-development"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@ankurnagpal",
+    "filename": "ankur-nagpal.md"
+  },
+  "anthropic-claude-prompting-guide": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@AlexFinn\"",
+    "filename": "anthropic-claude-prompting-guide.md"
+  },
+  "anthropic-courses": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "anthropic-courses.md"
+  },
+  "anthropic-inspired-prompt-template": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "anthropic-inspired-prompt-template.md"
+  },
+  "api-for-trading-across-prediction-markets": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@tom_doerr",
+    "filename": "api-for-trading-across-prediction-markets.md"
+  },
+  "aug-4": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@H54355Know",
+    "filename": "aug-4.md"
+  },
+  "basedbiohacker": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@BasedBiohacker",
+    "filename": "basedbiohacker.md"
+  },
+  "ben-tossell": {
+    "suggested_tags": [
+      "ai-agents",
+      "crypto-defi",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@bentossell",
+    "filename": "ben-tossell.md"
+  },
+  "bishal-nandi": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@LearnWithBishal",
+    "filename": "bishal-nandi.md"
+  },
+  "bitwise-bpro-debasement-etf": {
+    "suggested_tags": [
+      "crypto-defi"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@HHorsley\"",
+    "filename": "bitwise-bpro-debasement-etf.md"
+  },
+  "bot": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@luccasveg",
+    "filename": "bot.md"
+  },
+  "bowtied-biohacker": {
+    "suggested_tags": [
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@BowTiedUM",
+    "filename": "bowtied-biohacker.md"
+  },
+  "building-context-graphs-ai-systems": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"Animesh Koratana\"",
+    "filename": "building-context-graphs-ai-systems.md"
+  },
+  "chatgpt-options-trading-400-to-profit": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@rohanpaul_ai\"",
+    "filename": "chatgpt-options-trading-400-to-profit.md"
+  },
+  "chidanand-tripathi": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@thetripathi58",
+    "filename": "chidanand-tripathi.md"
+  },
+  "claude-agent-sdk-complete-guide": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@dabit3\"",
+    "filename": "claude-agent-sdk-complete-guide.md"
+  },
+  "claude-agent-sdk": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[ai-agents",
+      "sdk",
+      "claude",
+      "development]"
+    ],
+    "author": "",
+    "filename": "claude-agent-sdk.md"
+  },
+  "claude-code-best-practices-50-claude-code-tips": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@aiedge_",
+    "filename": "claude-code-best-practices-50-claude-code-tips.md"
+  },
+  "claude-code-complete-setup-guide": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@affaanmustafa\"",
+    "filename": "claude-code-complete-setup-guide.md"
+  },
+  "claude-code-for-account-executives": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@BenyaminHolley\"",
+    "filename": "claude-code-for-account-executives.md"
+  },
+  "claude-code-hyperstructures-ai-coding": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"Jake\"",
+    "filename": "claude-code-hyperstructures-ai-coding.md"
+  },
+  "claude-code-production-config-chinese": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@Gorden_Sun\"",
+    "filename": "claude-code-production-config-chinese.md"
+  },
+  "claude-code-remotion-video-creation": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@itsolelehmann\"",
+    "filename": "claude-code-remotion-video-creation.md"
+  },
+  "claude-code-video-production-hermes-ad": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@deedydas\"",
+    "filename": "claude-code-video-production-hermes-ad.md"
+  },
+  "clawd-bot-workflow-automation": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@tomosman\"",
+    "filename": "clawd-bot-workflow-automation.md"
+  },
+  "clone-any-saas-playbook-claude-factory": {
+    "suggested_tags": [
+      "ai-models-research",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@pipelineabuser\"",
+    "filename": "clone-any-saas-playbook-claude-factory.md"
+  },
+  "coffeewiththeclassics": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@CoffeewClassics",
+    "filename": "coffeewiththeclassics.md"
+  },
+  "consilience-is-the-idea-that-all-knowledge-should-eventually": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@SwipeWright",
+    "filename": "consilience-is-the-idea-that-all-knowledge-should-eventually.md"
+  },
+  "context-engineering": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[ai-agents",
+      "context",
+      "memory]"
+    ],
+    "author": "",
+    "filename": "context-engineering.md"
+  },
+  "corey-haines": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@coreyhainesco",
+    "filename": "corey-haines.md"
+  },
+  "cryptovcdegen": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@cryptovcdegen",
+    "filename": "cryptovcdegen.md"
+  },
+  "dec-27": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@chddaniel",
+    "filename": "dec-27.md"
+  },
+  "deepmind-discovered-that-neural-networks-can-train-for-thous": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@godofprompt",
+    "filename": "deepmind-discovered-that-neural-networks-can-train-for-thous.md"
+  },
+  "dukebot": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@Nielsen777Brian",
+    "filename": "dukebot.md"
+  },
+  "elle-lookbook": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@EvaLovesDesign",
+    "filename": "elle-lookbook.md"
+  },
+  "elon-musk-on-how-to-win": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@benln",
+    "filename": "elon-musk-on-how-to-win.md"
+  },
+  "every-openclaw-issue-nobody-told-you-about-and-how-to-fix-th": {
+    "suggested_tags": [
+      "ai-agents",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@kloss_xyz",
+    "filename": "every-openclaw-issue-nobody-told-you-about-and-how-to-fix-th.md"
+  },
+  "exception-routing": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[ai-agents",
+      "production",
+      "exception-handling]"
+    ],
+    "author": "",
+    "filename": "exception-routing.md"
+  },
+  "find-business-ideas-flippa-method": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@hridoyreh\"",
+    "filename": "find-business-ideas-flippa-method.md"
+  },
+  "footprints-in-the-house-ai-deceptive-alignment": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@iruletheworldmo\"",
+    "filename": "footprints-in-the-house-ai-deceptive-alignment.md"
+  },
+  "for-anyone-that-hasnt-grasped-ai-for-creatives-yet": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@Nate_Google_",
+    "filename": "for-anyone-that-hasnt-grasped-ai-for-creatives-yet.md"
+  },
+  "full-guide-how-to-unlock-extreme-focus-on-command": {
+    "suggested_tags": [
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "business]"
+    ],
+    "author": "@thedankoe",
+    "filename": "full-guide-how-to-unlock-extreme-focus-on-command.md"
+  },
+  "gina-acosta": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@ginacostag_",
+    "filename": "gina-acosta.md"
+  },
+  "global-claude-md-configuration": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@cloudxdev\"",
+    "filename": "global-claude-md-configuration.md"
+  },
+  "god-of-prompt": {
+    "suggested_tags": [
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@godofprompt",
+    "filename": "god-of-prompt.md"
+  },
+  "gofigurineme-project": {
+    "suggested_tags": [
+      "software-development",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[project",
+      "business",
+      "3d-printing",
+      "ecommerce]"
+    ],
+    "author": "",
+    "filename": "gofigurineme-project.md"
+  },
+  "greg-isenberg": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@gregisenberg",
+    "filename": "greg-isenberg.md"
+  },
+  "grok-medical-diagnosis-prompt": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@AJA_Cortes\"",
+    "filename": "grok-medical-diagnosis-prompt.md"
+  },
+  "guide-how-to-create-polymarket-weather-trading-clawdbot-and-": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@0xMovez",
+    "filename": "guide-how-to-create-polymarket-weather-trading-clawdbot-and-.md"
+  },
+  "he-predicted-the-rise-of": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@Gccooke",
+    "filename": "he-predicted-the-rise-of.md"
+  },
+  "hello-is-one-of-the-most-basic-words-in-the-english-language": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@colingorrie",
+    "filename": "hello-is-one-of-the-most-basic-words-in-the-english-language.md"
+  },
+  "heres-a-list-of-etfs-for-each-area-focusing-on-those-trackin": {
+    "suggested_tags": [
+      "crypto-defi",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@grok",
+    "filename": "heres-a-list-of-etfs-for-each-area-focusing-on-those-trackin.md"
+  },
+  "homemade-healthy-jelly": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@SolBrah",
+    "filename": "homemade-healthy-jelly.md"
+  },
+  "how-can-a-good-god-let-you-suffer-and-die": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@SeanBerube4",
+    "filename": "how-can-a-good-god-let-you-suffer-and-die.md"
+  },
+  "how-do-you-build-a-successful-trader-assistant-on-polymarket": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@noisyb0y1",
+    "filename": "how-do-you-build-a-successful-trader-assistant-on-polymarket.md"
+  },
+  "how-to-articulate-yourself-intelligently": {
+    "suggested_tags": [
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@thedankoe",
+    "filename": "how-to-articulate-yourself-intelligently.md"
+  },
+  "how-to-automate-your-entire-life-with-ai": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@sharbel",
+    "filename": "how-to-automate-your-entire-life-with-ai.md"
+  },
+  "how-to-build-a-claude-skill-to-consistently-write-humanized-": {
+    "suggested_tags": [
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@EXM7777",
+    "filename": "how-to-build-a-claude-skill-to-consistently-write-humanized-.md"
+  },
+  "how-to-make-your-first-million-on-polymarket": {
+    "suggested_tags": [
+      "prediction-markets",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development",
+      "business]"
+    ],
+    "author": "@k1rallik",
+    "filename": "how-to-make-your-first-million-on-polymarket.md"
+  },
+  "how-to-master-ai-in-30-days-the-exact-roadmap": {
+    "suggested_tags": [
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@EXM7777",
+    "filename": "how-to-master-ai-in-30-days-the-exact-roadmap.md"
+  },
+  "how-to-run-opus-46-on-openclaw-easy-guide-copy-paste": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@jumperz",
+    "filename": "how-to-run-opus-46-on-openclaw-easy-guide-copy-paste.md"
+  },
+  "httpstcowaxfutaphi": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@Matt_Horine",
+    "filename": "httpstcowaxfutaphi.md"
+  },
+  "i-built-a-c-terminal-to-scan-polymarket-for-automated-wallet": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@marlowxbt",
+    "filename": "i-built-a-c-terminal-to-scan-polymarket-for-automated-wallet.md"
+  },
+  "i-built-a-real-time": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@krajekis",
+    "filename": "i-built-a-real-time.md"
+  },
+  "i-built-a-tool-that-sees-the-future": {
+    "suggested_tags": [
+      "prediction-markets",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@Argona0x",
+    "filename": "i-built-a-tool-that-sees-the-future.md"
+  },
+  "i-built-an-ai-agent-swarm-in-discord-it-works-better-than-an": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@jumperz",
+    "filename": "i-built-an-ai-agent-swarm-in-discord-it-works-better-than-an.md"
+  },
+  "i-fed-20-openclaw-articles-to-opus-46-heres-the-setup-guide-": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@witcheer",
+    "filename": "i-fed-20-openclaw-articles-to-opus-46-heres-the-setup-guide-.md"
+  },
+  "i-have-just-created-a-neural-network-that-calculates-the-bit": {
+    "suggested_tags": [
+      "crypto-defi"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@CaffeSatoshi",
+    "filename": "i-have-just-created-a-neural-network-that-calculates-the-bit.md"
+  },
+  "i-like-the-concept-vibe-marketing-from-boringmarketer": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@yeeagency",
+    "filename": "i-like-the-concept-vibe-marketing-from-boringmarketer.md"
+  },
+  "i-need-you-to-watch-the-video-jameis-winston-recorded-for-th": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@cjzero",
+    "filename": "i-need-you-to-watch-the-video-jameis-winston-recorded-for-th.md"
+  },
+  "i-ran-a-quick-experiment-in-manus-and-wow-it-immediately-pul": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@HenrypenmanXD",
+    "filename": "i-ran-a-quick-experiment-in-manus-and-wow-it-immediately-pul.md"
+  },
+  "i-run-30-openclaw-jobs-a-day-this-is-what-actually-makes-the": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@ericosiu",
+    "filename": "i-run-30-openclaw-jobs-a-day-this-is-what-actually-makes-the.md"
+  },
+  "i-turned-andrej-karpathys-viral-ai-coding-rant-into-a-system": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@godofprompt",
+    "filename": "i-turned-andrej-karpathys-viral-ai-coding-rant-into-a-system.md"
+  },
+  "if-you-want-to-max-out-the-efficiency-of-your-life-youve-pro": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@pipelineabuser",
+    "filename": "if-you-want-to-max-out-the-efficiency-of-your-life-youve-pro.md"
+  },
+  "ihtesham-ali": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development",
+      "business]"
+    ],
+    "author": "@ihtesham2005",
+    "filename": "ihtesham-ali.md"
+  },
+  "im-boris-and-i-created-claude-code-i-wanted-to-quickly-share": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@bcherny",
+    "filename": "im-boris-and-i-created-claude-code-i-wanted-to-quickly-share.md"
+  },
+  "im-going-to-give-you-a-business-model-that-sounds-fake-but-p": {
+    "suggested_tags": [
+      "crypto-defi",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@pipelineabuser",
+    "filename": "im-going-to-give-you-a-business-model-that-sounds-fake-but-p.md"
+  },
+  "im-investing-millions-into-this": {
+    "suggested_tags": [
+      "stock-trading-finance",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@NoLimitGains",
+    "filename": "im-investing-millions-into-this.md"
+  },
+  "imagine-how-powerful-it-feels-to-sing-a-sea-shanty-with-the-": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@uncledoomer",
+    "filename": "imagine-how-powerful-it-feels-to-sing-a-sea-shanty-with-the-.md"
+  },
+  "insurrection-barbie": {
+    "suggested_tags": [
+      "systems-architecture"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "business]"
+    ],
+    "author": "@DefiyantlyFree",
+    "filename": "insurrection-barbie.md"
+  },
+  "intan-lestari": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@Intanlstr_",
+    "filename": "intan-lestari.md"
+  },
+  "its-still-a-bit-shaky-and-bleeding-edge-but-the-ralph-wiggum": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@arvidkahl",
+    "filename": "its-still-a-bit-shaky-and-bleeding-edge-but-the-ralph-wiggum.md"
+  },
+  "ive-been-building-dexter-for-2-months-now": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@virattt",
+    "filename": "ive-been-building-dexter-for-2-months-now.md"
+  },
+  "ive-been-running-openclaw-247-for-3-weeks-heres-what-actuall": {
+    "suggested_tags": [
+      "ai-agents",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@kaostyl",
+    "filename": "ive-been-running-openclaw-247-for-3-weeks-heres-what-actuall.md"
+  },
+  "ive-reached-the-point-where-i-have-to-start-taking-everythin": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@SJCapitalInvest",
+    "filename": "ive-reached-the-point-where-i-have-to-start-taking-everythin.md"
+  },
+  "jakob-move-or-die": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@moveorperish",
+    "filename": "jakob-move-or-die.md"
+  },
+  "josh-pigford": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@dougvk",
+    "filename": "josh-pigford.md"
+  },
+  "just-shipped-adversarial-spec-a-claude-code-plugin-for-writi": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@0xzak",
+    "filename": "just-shipped-adversarial-spec-a-claude-code-plugin-for-writi.md"
+  },
+  "kalshi-prediction-market-trading": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@catboyautist\"",
+    "filename": "kalshi-prediction-market-trading.md"
+  },
+  "kalshi-weather-trading-bot": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[project",
+      "trading",
+      "prediction-markets",
+      "bot]"
+    ],
+    "author": "",
+    "filename": "kalshi-weather-trading-bot.md"
+  },
+  "kevin-simback": {
+    "suggested_tags": [
+      "ai-agents",
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@KSimback",
+    "filename": "kevin-simback.md"
+  },
+  "kyle-the-writer": {
+    "suggested_tags": [
+      "prediction-markets",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@KyleDeWriter",
+    "filename": "kyle-the-writer.md"
+  },
+  "lifting-isnt-about-looking-good": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@IterIntellectus",
+    "filename": "lifting-isnt-about-looking-good.md"
+  },
+  "local-in-person-ai-classes-for-corporate-boomers": {
+    "suggested_tags": [
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@damianplayer",
+    "filename": "local-in-person-ai-classes-for-corporate-boomers.md"
+  },
+  "lovable-opus-landing-page-design": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@PrajwalTomar_\"",
+    "filename": "lovable-opus-landing-page-design.md"
+  },
+  "manus-claude-grok-ai-revenue-loop": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@whotfiszackk\"",
+    "filename": "manus-claude-grok-ai-revenue-loop.md"
+  },
+  "mark-roussin-cpa": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@Dividend_Dollar",
+    "filename": "mark-roussin-cpa.md"
+  },
+  "matt-van-swol": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@mattvanswol",
+    "filename": "matt-van-swol.md"
+  },
+  "matthew-berman": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@MatthewBerman",
+    "filename": "matthew-berman.md"
+  },
+  "maycrypto": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@xmayeth",
+    "filename": "maycrypto.md"
+  },
+  "me-and-my-friend-set-up-a-bot-battle": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@ventry089",
+    "filename": "me-and-my-friend-set-up-a-bot-battle.md"
+  },
+  "michael-hypermarkets": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@itsmichaelluu",
+    "filename": "michael-hypermarkets.md"
+  },
+  "michelle-labs": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@MolecularLab_",
+    "filename": "michelle-labs.md"
+  },
+  "mindbranches": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@MindBranches",
+    "filename": "mindbranches.md"
+  },
+  "multiple-experts-problem-solving-prompt": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@godofprompt\"",
+    "filename": "multiple-experts-problem-solving-prompt.md"
+  },
+  "my-anthropic-bill-for-the-past-2-weeks-has-been-insane-and-i": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@0xzak",
+    "filename": "my-anthropic-bill-for-the-past-2-weeks-has-been-insane-and-i.md"
+  },
+  "my-top-10-dca-plan-if-this-pullback-is-real": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@StockSavvyShay",
+    "filename": "my-top-10-dca-plan-if-this-pullback-is-real.md"
+  },
+  "nader-dabit": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@dabit3",
+    "filename": "nader-dabit.md"
+  },
+  "nanogpt-speed-record": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "nanogpt-speed-record.md"
+  },
+  "nateliason-skip-subagents-run-codex-cli-in-a-loop-with-a-prd": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@FelixCraftAI",
+    "filename": "nateliason-skip-subagents-run-codex-cli-in-a-loop-with-a-prd.md"
+  },
+  "next-time-you-use-ai-to-work-with-a-large-amount-of-informat": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@mds",
+    "filename": "next-time-you-use-ai-to-work-with-a-large-amount-of-informat.md"
+  },
+  "nick-spisak": {
+    "suggested_tags": [
+      "ai-agents",
+      "ai-models-research",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@NickSpisak_",
+    "filename": "nick-spisak.md"
+  },
+  "nick-vasilescu": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@nickvasiles",
+    "filename": "nick-vasilescu.md"
+  },
+  "non-technical-user-onboarding-prompt": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@seconds_0\"",
+    "filename": "non-technical-user-onboarding-prompt.md"
+  },
+  "nows-the-time-to-make-money-online-with-ai-arbitrage": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@marclou",
+    "filename": "nows-the-time-to-make-money-online-with-ai-arbitrage.md"
+  },
+  "o3-market-mapping-business-planning-prompt": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@mattshumer_\"",
+    "filename": "o3-market-mapping-business-planning-prompt.md"
+  },
+  "observational-memory-a-human-inspired-memory-system-for-ai-a": {
+    "suggested_tags": [
+      "ai-agents",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@mastra",
+    "filename": "observational-memory-a-human-inspired-memory-system-for-ai-a.md"
+  },
+  "one-of-the-best-things-i-applied-to-my-discord-setup-is-an-a": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@jumperz",
+    "filename": "one-of-the-best-things-i-applied-to-my-discord-setup-is-an-a.md"
+  },
+  "open-sourcing-compute-pooling-tek-if-you-have-multiple-compu": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@beaverd",
+    "filename": "open-sourcing-compute-pooling-tek-if-you-have-multiple-compu.md"
+  },
+  "openclaw-felt-like-talking-to-claude-until-i-changed-five-th": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@tomcrawshaw01",
+    "filename": "openclaw-felt-like-talking-to-claude-until-i-changed-five-th.md"
+  },
+  "openclaw-mac-mini-setup-the-one-prompt": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@CrypSaf",
+    "filename": "openclaw-mac-mini-setup-the-one-prompt.md"
+  },
+  "openclaw-quick-start-guide": {
+    "suggested_tags": [
+      "ai-agents",
+      "crypto-defi",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@123skely",
+    "filename": "openclaw-quick-start-guide.md"
+  },
+  "options-trading-dte-iv-strategy": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@WealthCoachMak\"",
+    "filename": "options-trading-dte-iv-strategy.md"
+  },
+  "opus-4-5-ralph-playwright-agi": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"Wes Winder\"",
+    "filename": "opus-4-5-ralph-playwright-agi.md"
+  },
+  "patrick-neve": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@catholicpat",
+    "filename": "patrick-neve.md"
+  },
+  "personal-finance-app-with-ai-assistant": {
+    "suggested_tags": [
+      "software-development"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@tom_doerr",
+    "filename": "personal-finance-app-with-ai-assistant.md"
+  },
+  "personal-panopticon-running-life-in-claude": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@mollycantillon\"",
+    "filename": "personal-panopticon-running-life-in-claude.md"
+  },
+  "polymarket-copy-trading-bot": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@tom_doerr\"",
+    "filename": "polymarket-copy-trading-bot.md"
+  },
+  "polymarket-times-newspaper": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@ankitkr0\"",
+    "filename": "polymarket-times-newspaper.md"
+  },
+  "polymarket-weather-bot-strategy": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@DextersSolab\"",
+    "filename": "polymarket-weather-bot-strategy.md"
+  },
+  "prediction-market-portfolio-2025": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@catboyautist\"",
+    "filename": "prediction-market-portfolio-2025.md"
+  },
+  "presentation-creation-skill-nano-kling-elevenlabs": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@angrypenguinPNG\"",
+    "filename": "presentation-creation-skill-nano-kling-elevenlabs.md"
+  },
+  "president-dr-rollergator-mvip-phd": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@drrollergator",
+    "filename": "president-dr-rollergator-mvip-phd.md"
+  },
+  "quant-science": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@quantscience_",
+    "filename": "quant-science.md"
+  },
+  "ralph-ai-coding-agent-setup-guide": {
+    "suggested_tags": [
+      "ai-agents",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"Ryan Carson\"",
+    "filename": "ralph-ai-coding-agent-setup-guide.md"
+  },
+  "ralphblaster-automated-dev-workflow": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@saasmakermac\"",
+    "filename": "ralphblaster-automated-dev-workflow.md"
+  },
+  "randy-grief": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@WarChiefkrimson",
+    "filename": "randy-grief.md"
+  },
+  "reads-with-ravi": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@readswithravi",
+    "filename": "reads-with-ravi.md"
+  },
+  "recursive-self-improvement-phase": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "systems-architecture"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[agi",
+      "singularity",
+      "recursive-improvement",
+      "timeline]"
+    ],
+    "author": "",
+    "filename": "recursive-self-improvement-phase.md"
+  },
+  "recursive-self-improvement-singularity-2026": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@alexwg\"",
+    "filename": "recursive-self-improvement-singularity-2026.md"
+  },
+  "releasing-the-best-indicator-i-ever-created-for-free-but-jus": {
+    "suggested_tags": [
+      "crypto-defi",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@CaffeSatoshi",
+    "filename": "releasing-the-best-indicator-i-ever-created-for-free-but-jus.md"
+  },
+  "ryan-carson": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@ryancarson",
+    "filename": "ryan-carson.md"
+  },
+  "sean-berube": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@SeanBerube4",
+    "filename": "sean-berube.md"
+  },
+  "sep-24": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@legen_eth",
+    "filename": "sep-24.md"
+  },
+  "seven-stocks-rsi-below-20-oversold": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@Mr_Derivatives\"",
+    "filename": "seven-stocks-rsi-below-20-oversold.md"
+  },
+  "shelpidwi3m": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@Shelpid_WI3M",
+    "filename": "shelpidwi3m.md"
+  },
+  "spec-based-development-askuserquestion": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@trq212\"",
+    "filename": "spec-based-development-askuserquestion.md"
+  },
+  "steal-my-openclaw-system-prompt-to-turn-it-into-an-actual-pr": {
+    "suggested_tags": [
+      "software-development"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@alex_prompter",
+    "filename": "steal-my-openclaw-system-prompt-to-turn-it-into-an-actual-pr.md"
+  },
+  "steal-this-mega-prompt-to-ship-production-ready-mobile-apps-": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@Hartdrawss",
+    "filename": "steal-this-mega-prompt-to-ship-production-ready-mobile-apps-.md"
+  },
+  "stocks-to-research": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "stocks-to-research.md"
+  },
+  "strategy-with-720-apy-on-polymarket-with-close-to-risk-free": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@nursexxl",
+    "filename": "strategy-with-720-apy-on-polymarket-with-close-to-risk-free.md"
+  },
+  "swing-trading-guide-35k-to-8m": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@kevinxu\"",
+    "filename": "swing-trading-guide-35k-to-8m.md"
+  },
+  "taste-of-the-world": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@hungry_video",
+    "filename": "taste-of-the-world.md"
+  },
+  "tell-claude-code-or-any-other-agent-to": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@TheAhmadOsman",
+    "filename": "tell-claude-code-or-any-other-agent-to.md"
+  },
+  "thanks-to-chatgpt-anyone-can-earn-6852-a-month-from-home": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@sairahul1",
+    "filename": "thanks-to-chatgpt-anyone-can-earn-6852-a-month-from-home.md"
+  },
+  "the-boring-marketer": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@boringmarketer",
+    "filename": "the-boring-marketer.md"
+  },
+  "the-fomo-around-claude-code-is-real": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@krispuckett",
+    "filename": "the-fomo-around-claude-code-is-real.md"
+  },
+  "the-government-is-telling-you-to-invest-in": {
+    "suggested_tags": [
+      "crypto-defi",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@RealJGBanks",
+    "filename": "the-government-is-telling-you-to-invest-in.md"
+  },
+  "the-lord-of-the-rings-does-not-take-place-on-an-imaginary-pl": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@the_culturist_",
+    "filename": "the-lord-of-the-rings-does-not-take-place-on-an-imaginary-pl.md"
+  },
+  "the-math-needed-for-trading-attention-markets-on-polymarket": {
+    "suggested_tags": [
+      "prediction-markets",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "the-math-needed-for-trading-attention-markets-on-polymarket.md"
+  },
+  "the-only-strategy-on-polymarket-that-actually-works-flawless": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@igor_mikerin",
+    "filename": "the-only-strategy-on-polymarket-that-actually-works-flawless.md"
+  },
+  "the-only-way-to-earn-passively-from-polymarket": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@DextersSolab",
+    "filename": "the-only-way-to-earn-passively-from-polymarket.md"
+  },
+  "the-president-is-literally-telling-you-where-to-invest": {
+    "suggested_tags": [
+      "crypto-defi"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@Speculator_io",
+    "filename": "the-president-is-literally-telling-you-where-to-invest.md"
+  },
+  "there-are-no-adults-in-the-room-the-cavalry-is-not-coming-ev": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@romanhelmetguy",
+    "filename": "there-are-no-adults-in-the-room-the-cavalry-is-not-coming-ev.md"
+  },
+  "theres-an-unexploited-sector-on-polymarket": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@thejayden",
+    "filename": "theres-an-unexploited-sector-on-polymarket.md"
+  },
+  "thinkingwest": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@thinkingwest",
+    "filename": "thinkingwest.md"
+  },
+  "this-ai-influencer-i-built-will-helping-me-grow-on-tiktok-yt": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@alexcooldev",
+    "filename": "this-ai-influencer-i-built-will-helping-me-grow-on-tiktok-yt.md"
+  },
+  "this-formula-has-already-made-my-15-year-old-brother-70000-a": {
+    "suggested_tags": [
+      "ai-agents",
+      "prediction-markets",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@seelffff",
+    "filename": "this-formula-has-already-made-my-15-year-old-brother-70000-a.md"
+  },
+  "this-guy-literally-rewires-your-brain-to-stop-procrastinatin": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@aaditsh",
+    "filename": "this-guy-literally-rewires-your-brain-to-stop-procrastinatin.md"
+  },
+  "this-is-a-genius-business-model": {
+    "suggested_tags": [
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@SievaKozinsky",
+    "filename": "this-is-a-genius-business-model.md"
+  },
+  "this-is-hands-down-the-best-way-to-work-with-claude-right-no": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@EXM7777",
+    "filename": "this-is-hands-down-the-best-way-to-work-with-claude-right-no.md"
+  },
+  "this-is-holy-sht": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@EHuanglu",
+    "filename": "this-is-holy-sht.md"
+  },
+  "this-is-insane": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@PolymarketStory",
+    "filename": "this-is-insane.md"
+  },
+  "this-is-the-exact-algorithm-serious-polymarket-arbitrage-bot": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "this-is-the-exact-algorithm-serious-polymarket-arbitrage-bot.md"
+  },
+  "this-is-whats-keeping-me-up-at-night-these-days": {
+    "suggested_tags": [
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "business]"
+    ],
+    "author": "@gregisenberg",
+    "filename": "this-is-whats-keeping-me-up-at-night-these-days.md"
+  },
+  "this-prompt-forces-ai-to-interrogate-your-idea-before-writin": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@kloss_xyz",
+    "filename": "this-prompt-forces-ai-to-interrogate-your-idea-before-writin.md"
+  },
+  "this-prompt-turns-every-answer-from-your-app-idea-interrogat": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@kloss_xyz",
+    "filename": "this-prompt-turns-every-answer-from-your-app-idea-interrogat.md"
+  },
+  "this-prompt-turns-your-ai-coding-agent-into-a-premium-uiux-a": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@kloss_xyz",
+    "filename": "this-prompt-turns-your-ai-coding-agent-into-a-premium-uiux-a.md"
+  },
+  "this-system-prompt-is-your-ai-coding-agents-operating-system": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@kloss_xyz",
+    "filename": "this-system-prompt-is-your-ai-coding-agents-operating-system.md"
+  },
+  "this-update-changed-everything": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@DextersSolab",
+    "filename": "this-update-changed-everything.md"
+  },
+  "those-who-copy-traded-him-turned-200-into-88k": {
+    "suggested_tags": [
+      "prediction-markets",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@bored2boar",
+    "filename": "those-who-copy-traded-him-turned-200-into-88k.md"
+  },
+  "to-view-keyboard-shortcuts-press-question-mark": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@tonysheng",
+    "filename": "to-view-keyboard-shortcuts-press-question-mark.md"
+  },
+  "top-3-ai-utility-stocks-power-infrastructure": {
+    "suggested_tags": [
+      "systems-architecture"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@StockSavvyShay\"",
+    "filename": "top-3-ai-utility-stocks-power-infrastructure.md"
+  },
+  "traces-of-texas": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@TracesofTexas",
+    "filename": "traces-of-texas.md"
+  },
+  "trader-made-150k-in-2-hours": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi",
+      "software-development"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@k1rallik",
+    "filename": "trader-made-150k-in-2-hours.md"
+  },
+  "trump-investment-sectors-2026": {
+    "suggested_tags": [
+      "crypto-defi"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@Bitcoin_Teddy\"",
+    "filename": "trump-investment-sectors-2026.md"
+  },
+  "trumps-adminstration-literally-telling-people-where-to-inves": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@TheProfInvestor",
+    "filename": "trumps-adminstration-literally-telling-people-where-to-inves.md"
+  },
+  "truthstream-media": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@truthstreamnews",
+    "filename": "truthstream-media.md"
+  },
+  "turn-this-thread-into-instructions-for-your-claudemd-file": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@EXM7777",
+    "filename": "turn-this-thread-into-instructions-for-your-claudemd-file.md"
+  },
+  "tweet-1771005625075": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@JeongHaeju",
+    "filename": "tweet-1771005625075.md"
+  },
+  "tweet-1771005625083": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@ArchiveExplorer",
+    "filename": "tweet-1771005625083.md"
+  },
+  "tweet-1771009384947": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@MoonDevOnYT",
+    "filename": "tweet-1771009384947.md"
+  },
+  "tweet-1771009384948": {
+    "suggested_tags": [
+      "prediction-markets",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "tweet-1771009384948.md"
+  },
+  "tweet-1771009384949": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@lunatik_corp",
+    "filename": "tweet-1771009384949.md"
+  },
+  "tweet-1771009638298": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "stock-trading-finance",
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@felixleezd",
+    "filename": "tweet-1771009638298.md"
+  },
+  "tweet-1771009638305": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "tweet-1771009638305.md"
+  },
+  "tweet-1771009640521": {
+    "suggested_tags": [
+      "prediction-markets",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "tweet-1771009640521.md"
+  },
+  "tweet-1771009640524": {
+    "suggested_tags": [
+      "prediction-markets",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading]"
+    ],
+    "author": "@ArchiveExplorer",
+    "filename": "tweet-1771009640524.md"
+  },
+  "tweet-1771009640528": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@MoonDevOnYT",
+    "filename": "tweet-1771009640528.md"
+  },
+  "tweet-1771009642731": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@RianSweetDoris",
+    "filename": "tweet-1771009642731.md"
+  },
+  "tweet-1771009642735": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@AleiahLock",
+    "filename": "tweet-1771009642735.md"
+  },
+  "tweet-1771009644947": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research",
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@NoahEpstein_",
+    "filename": "tweet-1771009644947.md"
+  },
+  "tweet-1771009644948": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@VibeMarketer_",
+    "filename": "tweet-1771009644948.md"
+  },
+  "tweet-1771009644950": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "systems-architecture",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@RohOnChain",
+    "filename": "tweet-1771009644950.md"
+  },
+  "tweet-1771009644951": {
+    "suggested_tags": [
+      "prediction-markets",
+      "crypto-defi"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "development]"
+    ],
+    "author": "@frostikkkk",
+    "filename": "tweet-1771009644951.md"
+  },
+  "tweet-1771009647152": {
+    "suggested_tags": [
+      "software-development"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@mernit",
+    "filename": "tweet-1771009647152.md"
+  },
+  "tweet-1771009653721": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@NoahEpstein_",
+    "filename": "tweet-1771009653721.md"
+  },
+  "tweet-1771009653723": {
+    "suggested_tags": [
+      "prediction-markets",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@Predictefy",
+    "filename": "tweet-1771009653723.md"
+  },
+  "tweet-1771009655933": {
+    "suggested_tags": [
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@mralexthomas",
+    "filename": "tweet-1771009655933.md"
+  },
+  "tweet-1771009655938": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research",
+      "learning-resources"
+    ],
+    "confidence": 0.7,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development",
+      "business]"
+    ],
+    "author": "@rohit4verse",
+    "filename": "tweet-1771009655938.md"
+  },
+  "tweet-1771009658147": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@_EricHu",
+    "filename": "tweet-1771009658147.md"
+  },
+  "tweet-1771009664697": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@oguzerkan",
+    "filename": "tweet-1771009664697.md"
+  },
+  "tweet-1771009664698": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@foundring1",
+    "filename": "tweet-1771009664698.md"
+  },
+  "tweet-1771009664699": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@Soulfoodiiee",
+    "filename": "tweet-1771009664699.md"
+  },
+  "tweet-1771009666889": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@ChrisLaubAI",
+    "filename": "tweet-1771009666889.md"
+  },
+  "tweet-1771009675715": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@benkellyone",
+    "filename": "tweet-1771009675715.md"
+  },
+  "tweet-1771009680138": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@s4ndgra1ns",
+    "filename": "tweet-1771009680138.md"
+  },
+  "tweet-1771009682352": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@MASSExpedition",
+    "filename": "tweet-1771009682352.md"
+  },
+  "tweet-1771009682353": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@benkellyone",
+    "filename": "tweet-1771009682353.md"
+  },
+  "tweet-1771009682354": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@bensmithlive",
+    "filename": "tweet-1771009682354.md"
+  },
+  "tweet-1771009682355": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@CoachDanGo",
+    "filename": "tweet-1771009682355.md"
+  },
+  "tweet-1771009682356": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@heyshrutimishra",
+    "filename": "tweet-1771009682356.md"
+  },
+  "tweet-1771009682357": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@CoachDanGo",
+    "filename": "tweet-1771009682357.md"
+  },
+  "tweet-1771009684582": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@gaulicsmith",
+    "filename": "tweet-1771009684582.md"
+  },
+  "unbias-fyi-crypto-analyst-tracker": {
+    "suggested_tags": [
+      "crypto-defi"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@ki_young_ju\"",
+    "filename": "unbias-fyi-crypto-analyst-tracker.md"
+  },
+  "use-this-prompt": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@kalashbuilds",
+    "filename": "use-this-prompt.md"
+  },
+  "using-chatgpt-4o-to-create-3d-assets-for-your-video-games-is": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@techhalla",
+    "filename": "using-chatgpt-4o-to-create-3d-assets-for-your-video-games-is.md"
+  },
+  "vibe-coding-trading-bot-tutorial": {
+    "suggested_tags": [
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@MoonDevOnYT\"",
+    "filename": "vibe-coding-trading-bot-tutorial.md"
+  },
+  "vibecoding-automated-product-building": {
+    "suggested_tags": [
+      "learning-resources"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"Ethan\"",
+    "filename": "vibecoding-automated-product-building.md"
+  },
+  "vicky-verma": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@Unexplained2020",
+    "filename": "vicky-verma.md"
+  },
+  "wallstreetbets-best-stock-2026-poll": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@DekmarTrades\"",
+    "filename": "wallstreetbets-best-stock-2026-poll.md"
+  },
+  "want-free-scraping-for-whatever-you-want": {
+    "suggested_tags": [
+      "ai-agents"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@lazycorp",
+    "filename": "want-free-scraping-for-whatever-you-want.md"
+  },
+  "watch-berlin-sin-city-from-the-cbc-free-on-youtube-you-will-": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@AlexFreeBased",
+    "filename": "watch-berlin-sin-city-from-the-cbc-free-on-youtube-you-will-.md"
+  },
+  "we-just-open-sourced-the-code-simplifier-agent-we-use-on-the": {
+    "suggested_tags": [
+      "ai-agents",
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "development]"
+    ],
+    "author": "@bcherny",
+    "filename": "we-just-open-sourced-the-code-simplifier-agent-we-use-on-the.md"
+  },
+  "weather-trading-clawdbots-making-thousands-on-polymarket-by-": {
+    "suggested_tags": [
+      "prediction-markets",
+      "software-development",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading",
+      "development]"
+    ],
+    "author": "@0xMovez",
+    "filename": "weather-trading-clawdbots-making-thousands-on-polymarket-by-.md"
+  },
+  "weve-spent-the-last-10-months-analyzing-every-single-tariff-": {
+    "suggested_tags": [
+      "stock-trading-finance"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "trading]"
+    ],
+    "author": "@KobeissiLetter",
+    "filename": "weve-spent-the-last-10-months-analyzing-every-single-tariff-.md"
+  },
+  "what-are-good-blood-tests-for-men": {
+    "suggested_tags": [
+      "business-entrepreneurship"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@AJA_Cortes",
+    "filename": "what-are-good-blood-tests-for-men.md"
+  },
+  "white-house-insider-polymarket-iran": {
+    "suggested_tags": [
+      "prediction-markets"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "\"@Argona0x\"",
+    "filename": "white-house-insider-polymarket-iran.md"
+  },
+  "whoever-you-are-wherever-you-are-read-this-book-it-has-my-st": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@keeper_orchard",
+    "filename": "whoever-you-are-wherever-you-are-read-this-book-it-has-my-st.md"
+  },
+  "why-does-one-number1618keep-showing-up-in-nature-art-and-arc": {
+    "suggested_tags": [
+      "software-development",
+      "systems-architecture"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@randallwcarlson",
+    "filename": "why-does-one-number1618keep-showing-up-in-nature-art-and-arc.md"
+  },
+  "wow-this-claude-code-design-hack-is-wild": {
+    "suggested_tags": [
+      "software-development",
+      "ai-models-research"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "development]"
+    ],
+    "author": "@learn2vibe",
+    "filename": "wow-this-claude-code-design-hack-is-wild.md"
+  },
+  "writing": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "writing.md"
+  },
+  "you-can-just-10x-your-ai-copywriting-by-building-a-skill-tra": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents]"
+    ],
+    "author": "@EXM7777",
+    "filename": "you-can-just-10x-your-ai-copywriting-by-building-a-skill-tra.md"
+  },
+  "you-can-now-run-70b-llms-on-a-4gb-gpu": {
+    "suggested_tags": [
+      "ai-models-research"
+    ],
+    "confidence": 0.95,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@hasantoxr",
+    "filename": "you-can-now-run-70b-llms-on-a-4gb-gpu.md"
+  },
+  "you-cant-make-this-up": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated]"
+    ],
+    "author": "@KobeissiLetter",
+    "filename": "you-cant-make-this-up.md"
+  },
+  "your-timeline-is-filled-with-ghibli-selfies-made-with-chatgp": {
+    "suggested_tags": [
+      "business-entrepreneurship",
+      "learning-resources"
+    ],
+    "confidence": 0.85,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "ai-agents",
+      "trading",
+      "business]"
+    ],
+    "author": "@gregisenberg",
+    "filename": "your-timeline-is-filled-with-ghibli-selfies-made-with-chatgp.md"
+  },
+  "youre-not-procrastinating-because-youre-lazy": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[tweet",
+      "migrated",
+      "business]"
+    ],
+    "author": "@jinkoh",
+    "filename": "youre-not-procrastinating-because-youre-lazy.md"
+  },
+  "\u201cact-as-an-expert\u2026\u201d": {
+    "suggested_tags": [],
+    "confidence": 0.0,
+    "current_tags": [
+      "[migrated",
+      "ai]"
+    ],
+    "author": "",
+    "filename": "\u201cact-as-an-expert\u2026\u201d.md"
+  }
+}
