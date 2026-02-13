@@ -86,15 +86,19 @@ const bookmarks = tweets.map(tweet => {
 fs.writeFileSync(outputPath, JSON.stringify(bookmarks, null, 2));
 console.log('✓ Saved ' + bookmarks.length + ' bookmarks');
 
-// Merge into fetched-tweets.json (dedup by URL)
+// Merge into fetched-tweets.json (dedup by URL, backfill empty content)
 const fetchedPath = path.join(scriptDir, 'fetched-tweets.json');
 let existing = [];
 try { existing = JSON.parse(fs.readFileSync(fetchedPath, 'utf-8')); } catch (e) {}
-const existingUrls = new Set(existing.map(r => r.url));
+const existingByUrl = new Map(existing.map((r, i) => [r.url, i]));
 
 let added = 0;
+let backfilled = 0;
 for (const b of bookmarks) {
-    if (!existingUrls.has(b.baseUrl) && b.birdData.text) {
+    if (!b.birdData.text) continue;
+    const idx = existingByUrl.get(b.baseUrl);
+    if (idx === undefined) {
+        // New tweet
         existing.push({
             url: b.baseUrl,
             accessible: true,
@@ -109,11 +113,21 @@ for (const b of bookmarks) {
             firstSeen: 'bookmarks'
         });
         added++;
+    } else if (!existing[idx].content || existing[idx].content.length === 0) {
+        // Backfill empty-content entry with bird data
+        existing[idx].content = b.birdData.text;
+        existing[idx].author = b.birdData.author;
+        existing[idx].handle = b.birdData.handle;
+        existing[idx].createdAt = b.birdData.createdAt;
+        existing[idx].metrics = b.birdData.metrics;
+        existing[idx].media = b.birdData.media;
+        existing[idx].timestamp = new Date().toISOString();
+        backfilled++;
     }
 }
 
 fs.writeFileSync(fetchedPath, JSON.stringify(existing, null, 2));
-console.log('✓ Merged ' + added + ' new tweets into fetched-tweets.json (' + existing.length + ' total)');
+console.log('✓ Merged ' + added + ' new, ' + backfilled + ' backfilled into fetched-tweets.json (' + existing.length + ' total)');
 
 // Clean up raw file
 fs.unlinkSync(rawPath);
