@@ -73,4 +73,64 @@ async function main() {
   console.log(`Ready for openclaw to process.`);
 }
 
-main().catch(console.error);
+/**
+ * Deduplication utility - fixes stuck tweets in loop
+ * Run with: node process-tweets.js --dedup
+ *
+ * Checks for atom files that exist but aren't marked as processed,
+ * then marks them in .processed-links.json to prevent re-detection
+ */
+async function dedupMode() {
+  const VAULT_PATH = process.env.VAULT_PATH || '/Volumes/My Shared Files/StefanEternal';
+  const ATOMS_PATH = path.join(VAULT_PATH, 'atoms');
+  const PROCESSED_FILE = path.join(SCRIPT_DIR, '.processed-links.json');
+
+  if (!fs.existsSync(ATOMS_PATH)) {
+    console.error(`❌ Atoms directory not found: ${ATOMS_PATH}`);
+    process.exit(1);
+  }
+
+  console.log('🔍 Scanning for stuck tweets...\n');
+
+  const atomFiles = fs.readdirSync(ATOMS_PATH).filter(f => f.endsWith('.md'));
+  let processed = safeReadJSON(PROCESSED_FILE, {});
+  let fixed = 0;
+
+  for (const file of atomFiles) {
+    const filePath = path.join(ATOMS_PATH, file);
+    const content = fs.readFileSync(filePath, 'utf-8');
+
+    // Extract source URL from frontmatter
+    const match = content.match(/source: (https:\/\/[^\n]+)/);
+    if (!match) continue;
+
+    const sourceUrl = match[1].trim();
+
+    // If atom exists but URL not in processed list, add it
+    if (!processed[sourceUrl]) {
+      processed[sourceUrl] = {
+        processedAt: new Date().toISOString(),
+        url: sourceUrl,
+        deduped: true
+      };
+      console.log(`✓ Fixed: ${sourceUrl}`);
+      fixed++;
+    }
+  }
+
+  if (fixed > 0) {
+    fs.writeFileSync(PROCESSED_FILE, JSON.stringify(processed, null, 2));
+    console.log(`\n================================`);
+    console.log(`✓ Deduped: ${fixed} stuck tweets`);
+    console.log(`================================\n`);
+  } else {
+    console.log('✓ No stuck tweets found\n');
+  }
+}
+
+// Handle CLI args
+if (process.argv[2] === '--dedup') {
+  dedupMode().catch(console.error);
+} else {
+  main().catch(console.error);
+}
