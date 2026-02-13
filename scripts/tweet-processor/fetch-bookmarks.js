@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
+const { safeReadJSON } = require('./lib/fetch-utils');
 
 const VAULT_PATH = process.env.VAULT_PATH || path.join(process.env.HOME, 'Library/Mobile Documents/iCloud~md~obsidian/Documents/StefanEternal');
 
@@ -88,7 +89,11 @@ async function main() {
     process.exit(1);
   }
 
-  const cookies = JSON.parse(fs.readFileSync(cookiesPath, 'utf-8'));
+  const cookies = safeReadJSON(cookiesPath, null);
+  if (!cookies) {
+    console.error('❌ Failed to parse .cookies.json');
+    process.exit(1);
+  }
   console.log('✓ Loaded authentication cookies\n');
 
   // Launch browser

@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
+const { safeReadJSON, fetchTweetContent } = require('./lib/fetch-utils');
 
 const VAULT_PATH = process.env.VAULT_PATH || path.join(process.env.HOME, 'Library/Mobile Documents/iCloud~md~obsidian/Documents/StefanEternal');
 
@@ -21,7 +22,7 @@ function loadBookmarkedLinks() {
     return null;
   }
 
-  const bookmarks = JSON.parse(fs.readFileSync(bookmarksPath, 'utf-8'));
+  const bookmarks = safeReadJSON(bookmarksPath, []);
   return bookmarks.map(b => ({
     url: b.url,
     baseUrl: b.baseUrl,
@@ -89,68 +90,6 @@ function scanVaultForLinks() {
 }
 
 /**
- * Fetch tweet content using Playwright
- */
-async function fetchTweetContent(context, url) {
-  const page = await context.newPage();
-
-  try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-
-    // Wait for tweet content to load (article element contains tweets)
-    try {
-      await page.waitForSelector('article', { timeout: 8000 });
-      await page.waitForTimeout(2000); // Extra wait for content to render
-    } catch (e) {
-      // If no article found, might be login wall or error
-    }
-
-    // Check for login wall
-    const hasLoginWall = await page.locator('text=Sign in to X').count() > 0 ||
-                         await page.locator('text=Log in to X').count() > 0 ||
-                         await page.locator('text=Don\'t miss what\'s happening').count() > 0;
-
-    if (hasLoginWall) {
-      return {
-        url: url,
-        accessible: false,
-        error: 'Login wall detected',
-        timestamp: new Date().toISOString()
-      };
-    }
-
-    // Extract tweet content from article elements
-    const textContent = await page.evaluate(() => {
-      const articles = document.querySelectorAll('article');
-      let content = '';
-      articles.forEach((article, i) => {
-        const text = article.innerText || article.textContent;
-        if (i === 0) {
-          content = text; // Main tweet is first article
-        }
-      });
-      return content || document.body.innerText;
-    });
-
-    return {
-      url: url,
-      accessible: true,
-      content: textContent,
-      timestamp: new Date().toISOString()
-    };
-  } catch (error) {
-    return {
-      url: url,
-      accessible: false,
-      error: error.message,
-      timestamp: new Date().toISOString()
-    };
-  } finally {
-    await page.close();
-  }
-}
-
-/**
  * Main function
  */
 async function main() {
@@ -177,10 +116,9 @@ async function main() {
 
   // Load cookies
   const cookiesPath = path.join(__dirname, '.cookies.json');
-  let cookies = null;
-  if (fs.existsSync(cookiesPath)) {
+  let cookies = safeReadJSON(cookiesPath, null);
+  if (cookies) {
     console.log('Loading authentication cookies...');
-    cookies = JSON.parse(fs.readFileSync(cookiesPath, 'utf-8'));
   } else {
     console.log('⚠️  No .cookies.json found. Running without authentication.');
     console.log('   See COOKIE_SETUP.md for instructions.\n');

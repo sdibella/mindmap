@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { safeReadJSON } = require('./lib/fetch-utils');
 
 const url = process.argv[2];
 
@@ -16,11 +17,7 @@ if (!url) {
 }
 
 const processedPath = path.join(__dirname, '.processed-links.json');
-
-let processed = {};
-if (fs.existsSync(processedPath)) {
-  processed = JSON.parse(fs.readFileSync(processedPath, 'utf-8'));
-}
+let processed = safeReadJSON(processedPath, {});
 
 const baseUrl = url.split('?')[0];
 processed[baseUrl] = {

@@ -7,21 +7,18 @@
 
 const fs = require('fs');
 const path = require('path');
+const { safeReadJSON } = require('./lib/fetch-utils');
 
 const fetchedPath = path.join(__dirname, 'fetched-tweets.json');
 const processedPath = path.join(__dirname, '.processed-links.json');
 
-if (!fs.existsSync(fetchedPath)) {
+const fetched = safeReadJSON(fetchedPath, null);
+if (!fetched) {
   console.error('No fetched-tweets.json found. Run npm run fetch first.');
   process.exit(1);
 }
 
-const fetched = JSON.parse(fs.readFileSync(fetchedPath, 'utf-8'));
-
-let processed = {};
-if (fs.existsSync(processedPath)) {
-  processed = JSON.parse(fs.readFileSync(processedPath, 'utf-8'));
-}
+const processed = safeReadJSON(processedPath, {});
 
 const unprocessed = fetched.filter(tweet => {
   const baseUrl = tweet.url.split('?')[0];
