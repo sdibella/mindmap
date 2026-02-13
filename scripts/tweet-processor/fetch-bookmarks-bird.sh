@@ -5,6 +5,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export VAULT_PATH="${VAULT_PATH:-/Volumes/My Shared Files/StefanEternal}"
 LOG_FILE="${HOME}/.x-bookmark-fetch.log"
 RAW_FILE="${SCRIPT_DIR}/.bird-bookmarks-raw.json"
 OUTPUT_FILE="${SCRIPT_DIR}/bookmarked-urls.json"
