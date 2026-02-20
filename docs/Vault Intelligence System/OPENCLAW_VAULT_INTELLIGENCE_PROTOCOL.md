@@ -1,7 +1,7 @@
 ---
 title: OPENCLAW Vault Intelligence Protocol
-version: 1.0
-updated: 2026-02-13
+version: 2.0
+updated: 2026-02-20
 status: living_document
 ---
 
@@ -503,33 +503,49 @@ Every categorization gets a confidence score (0.0 to 1.0):
 
 ## Implementation Reference
 
-### How OPENCLAW Uses This
+### How OPENCLAW Uses This (v2 — AI-Powered)
 
-1. **Nightly Run** (`vault-intelligence-engine.py`)
-   - Reads this protocol
-   - Applies all categorization rules
-   - Generates backlinks using similarity algorithm
-   - Outputs: `vault-metadata.json`
+Categorization is performed by OpenClaw agent prompts, not Python regex scripts. The agent reads this protocol, understands the content semantically, and creates atoms with proper categories, confidence scores, entities, and wiki-links in one pass.
 
-2. **Weekly Review** (`weekly-review.py`)
-   - Identifies LOW confidence items
-   - Finds edge cases
-   - Detects emerging patterns
-   - Outputs: `WEEKLY_REVIEW.md` for Stefan
+1. **Nightly Categorization** (`prompts/nightly-categorize.md`)
+   - Reads this protocol for category definitions
+   - Processes ≤20 items from `review-queue.json`
+   - Creates atom files directly in `StefanEternal/atoms/`
+   - Adds bidirectional wiki-links inline
+   - Updates `processing-state.json` cursor
 
-3. **Monthly Learning** (`monthly-synthesis.py`)
-   - Analyzes month of data
-   - Proposes protocol updates
-   - Updates this document
-   - Outputs: `MONTHLY_SYNTHESIS.md`
+2. **Weekly Review** (`prompts/weekly-review.md`)
+   - Audits all atoms for quality issues
+   - Fixes low confidence, orphans, generic tags, broken links
+   - Outputs: `WEEKLY_REVIEW.md`
 
-### Scripts Location
-- `scripts/tweet-processor/vault-intelligence-engine.py`
-- `scripts/tweet-processor/weekly-review.py`
-- `scripts/tweet-processor/monthly-synthesis.py`
+3. **Monthly Synthesis** (`prompts/monthly-synthesis.md`)
+   - Deep analysis of vault health and trends
+   - Proposes protocol updates (applied after Stefan's approval)
+   - Updates MOC files
+   - Outputs: `MONTHLY_SYNTHESIS.md` + archive to `docs/syntheses/`
+
+### Prompt Locations
+- `scripts/tweet-processor/prompts/nightly-categorize.md`
+- `scripts/tweet-processor/prompts/weekly-review.md`
+- `scripts/tweet-processor/prompts/monthly-synthesis.md`
+
+### State Files
+- `scripts/tweet-processor/processing-state.json` — incremental cursor
+- `scripts/tweet-processor/review-queue.json` — unprocessed items
+
+### Cron Jobs (VM: `finn@finns-virtual-machine`)
+| Schedule | Job | Notes |
+|----------|-----|-------|
+| Daily 1 AM | `npm run pipeline` | Fetch bookmarks → review queue |
+| Daily 2 AM | Nightly categorize prompt | Process ≤20 new items |
+| Monday 8 AM | Weekly review prompt | Quality audit |
+| 1st of month, 9 AM | Monthly synthesis prompt | Deep analysis |
+
+### Retired (v1)
+The original Python scripts are archived in `scripts/tweet-processor/_retired/`. These used regex pattern matching and pairwise O(n²) similarity scoring — replaced by AI semantic understanding.
 
 ### Related Documentation
-- `docs/OPENCLAW_AUTOMATION_SETUP.md` — How to run nightly/weekly/monthly
 - Monthly syntheses → `docs/syntheses/MONTHLY_SYNTHESIS_YYYY_MM.md`
 
 ---
@@ -543,7 +559,7 @@ A: Analysis of 266 existing atoms revealed natural topic clusters. These 10 cove
 A: Flag it with low confidence. Monthly review will determine if we need a new category or if the content is genuinely unique.
 
 **Q: Should I re-tag old content?**
-A: Nightly script does this automatically. Monthly review surfaces any that changed significantly.
+A: Weekly review catches and fixes poorly tagged atoms. A full backfill of existing atoms with AI categorization is planned as a separate effort.
 
 **Q: What about content that's 50/50 between two categories?**
 A: Tag both with equal strength. The backlinking algorithm handles this well.
@@ -553,17 +569,15 @@ A: They add context without changing primary categorization. "practical-strategy
 
 ---
 
-## Next: Automation Setup
+## Next: Cron Setup
 
-See `docs/OPENCLAW_AUTOMATION_SETUP.md` for:
-- How to set up nightly cron job
-- How to configure weekly review
-- How to run monthly synthesis
-- Troubleshooting and monitoring
+Cron jobs are configured on the VM (`finn@finns-virtual-machine`) using OpenClaw's cron system. Each prompt file in `scripts/tweet-processor/prompts/` is fired by the OpenClaw agent on schedule; AutoRouter selects the model.
+
+For troubleshooting: check OpenClaw agent logs on the VM.
 
 ---
 
-**Version:** 1.0 (2026-02-13)
+**Version:** 2.0 (2026-02-20)
 **Status:** Living document - updated monthly
-**Last Updated:** 2026-02-13
-**Next Review:** 2026-03-13
+**Last Updated:** 2026-02-20
+**Next Review:** 2026-03-20

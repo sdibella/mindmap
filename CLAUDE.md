@@ -4,98 +4,116 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a wrapper project for organizing and managing an Obsidian vault. The actual Obsidian vault is stored in the `StefanEternal/` directory, which is excluded from version control.
+This repository is a tooling and automation layer for the **StefanEternal Obsidian vault** — an AI-focused knowledge base built from bookmarked tweets. The vault is NOT a personal notes system; it's a structured collection of processed X (Twitter) bookmarks organized into atomic notes with intelligent backlinking.
+
+The actual vault lives in `StefanEternal/` (gitignored). This repo contains the scripts and docs that power the **OPENCLAW Vault Intelligence System**.
 
 ## Repository Structure
 
-- `StefanEternal/` - The Obsidian vault (gitignored, not version controlled)
-- This repository contains tools, scripts, and utilities for organizing the vault
+```
+mindmap/
+├── StefanEternal/              # Obsidian vault (gitignored)
+├── scripts/tweet-processor/    # OPENCLAW automation scripts
+│   ├── prompts/                      # OpenClaw agent prompts (v2)
+│   │   ├── nightly-categorize.md     # Nightly: AI-powered categorization
+│   │   ├── weekly-review.md          # Weekly: quality audit + fixes
+│   │   └── monthly-synthesis.md      # Monthly: deep analysis + evolution
+│   ├── processing-state.json         # Incremental processing cursor
+│   ├── review-queue.json             # Unprocessed items from ingest
+│   ├── fetch-bookmarks.js            # Ingest: fetch X bookmarks
+│   ├── ingest-xeets.js              # Ingest: process into review queue
+│   ├── validate-bidirectional.py     # Audit: check link integrity
+│   ├── validate-graph.py            # Audit: check graph health
+│   └── _retired/                     # Archived v1 Python scripts
+└── docs/Vault Intelligence System/   # OPENCLAW documentation
+    └── OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md  # Master rules (read this first)
+```
 
-## Vault Organization (PARA Method)
-
-The vault follows the PARA organizational method:
+## Vault Structure
 
 ```
 StefanEternal/
-├── 00 - Inbox/           # Capture zone for new, unprocessed notes
-├── 01 - Projects/        # Active projects with specific goals and deadlines
-├── 02 - Areas/           # Ongoing areas of responsibility (no end date)
-├── 03 - Resources/       # Reference materials, learnings, research
-├── 04 - Archives/        # Completed projects and inactive items
-├── Templates/            # Note templates for consistent structure
-├── Attachments/          # Images, PDFs, and other media files
-└── Daily Notes/          # Daily notes (date-based)
+├── atoms/          # Individual tweet-based knowledge atoms (the core content)
+├── maps/           # Maps of Content (MOCs) linking related atoms by topic
+├── Memory/         # ClawVault memory files (OPENCLAW's persistent state)
+├── 00 - Inbox/     # Staging area for unprocessed tweets
+├── _archive/       # Archived/inactive atoms
+├── _templates/     # Note templates
+├── Daily Notes/    # Date-based notes
+├── reports/        # Generated reports
+└── logs/           # System logs
 ```
 
-### Available Templates
+## The Atom System
 
-Located in `StefanEternal/Templates/`:
-- **Daily Note.md** - Daily journaling and task tracking
-- **Project.md** - Project planning with goals, timeline, and tasks
-- **Meeting Note.md** - Meeting agenda, notes, decisions, and action items
-- **Resource.md** - Book notes, article summaries, learning resources
-- **Weekly Review.md** - Weekly reflection and planning
+The vault uses an **AI-native atom model**, not PARA. Each atom is a self-contained knowledge unit:
 
-## PARA Workflow
+- One tweet → one atom in `atoms/`
+- YAML frontmatter: `tags`, `created`, `updated`, `source`, `author`, `type: tweet`, `confidence`, `entities`
+- Backlinks connect related atoms via `[[atom-name]]` syntax
+- MOC files in `maps/` aggregate atoms by topic (ai-agents, crypto-defi, prediction-markets, etc.)
 
-1. **Capture** → Everything starts in `00 - Inbox/`
-2. **Clarify** → Process inbox items and determine their type:
-   - Projects: Has a goal and deadline → `01 - Projects/`
-   - Areas: Ongoing responsibility → `02 - Areas/`
-   - Resources: Reference material → `03 - Resources/`
-3. **Archive** → When projects complete or areas become inactive → `04 - Archives/`
+## OPENCLAW System (v2 — AI-Powered)
 
-## Working with the Obsidian Vault
+The **Vault Intelligence System** uses OpenClaw agent prompts (not Python regex) for categorization and backlinking. The AI reads content, understands it, and creates properly categorized atoms with wiki-links in one pass.
 
-- The Obsidian vault files are in `StefanEternal/` but should NOT be committed to git
-- Any scripts or tools created should operate on files within `StefanEternal/`
-- Obsidian uses markdown files (.md) for notes with YAML frontmatter for metadata
-- Links between notes use the `[[Note Name]]` or `[[Note Name|Display Text]]` format
-- Templates use Obsidian's template syntax (e.g., `{{date}}`, `{{title}}`)
+**Architecture:**
+```
+review-queue.json → OpenClaw agent (prompt) → atom files with wiki-links
+                    ↑ reads protocol doc        ↑ writes directly
+                    ↑ reads existing atoms       ↑ marks items processed
+                    ↑ AutoRouter picks model     ↑ updates state cursor
+```
 
-## Important Notes
+**Cron jobs** (on VM `finn@finns-virtual-machine`):
+| Schedule | Prompt | Purpose |
+|----------|--------|---------|
+| Daily 1 AM | `npm run pipeline` | Fetch new bookmarks → review queue |
+| Daily 2 AM | `prompts/nightly-categorize.md` | Process ≤20 new items into atoms |
+| Monday 8 AM | `prompts/weekly-review.md` | Audit quality, fix issues |
+| 1st of month | `prompts/monthly-synthesis.md` | Deep analysis, propose protocol changes |
 
-- Never remove `StefanEternal/` from .gitignore
-- Tools should be read-safe by default - confirm before making bulk modifications to vault files
-- Preserve existing note structure and formatting when processing vault files
+- **10 primary categories:** ai-agents, prediction-markets, crypto-defi, software-development, ai-models-research, stock-trading-finance, business-entrepreneurship, systems-architecture, learning-resources, people-personas
+- **Protocol doc:** `docs/Vault Intelligence System/OPENCLAW_VAULT_INTELLIGENCE_PROTOCOL.md` — single source of truth for all categorization rules
+- **ClawVault Memory:** `StefanEternal/Memory/` — OPENCLAW's persistent memory and indexes (e.g., `X Bookmarks.md`)
+
+## Working with the Vault
+
+- Files in `StefanEternal/` must NOT be committed to git
+- Default to read-safe operations — confirm before bulk modifications
+- Preserve existing atom structure and YAML frontmatter
+- Obsidian links use `[[Note Name]]` or `[[Note Name|Display Text]]` format
+- When in doubt, check the protocol doc before categorizing or linking
 
 ## Workflow Orchestration
 
 ### 1. Plan Mode Default
 - Enter plan mode for ANY non-trivial task (3+ steps or architectural decisions)
 - If something goes sideways, STOP and re-plan immediately – don't keep pushing
-- Use plan mode for verification steps, not just building
 - Write detailed specs upfront to reduce ambiguity
 
 ### 2. Subagent Strategy
 - Use subagents liberally to keep main context window clean
 - Offload research, exploration, and parallel analysis to subagents
-- For complex problems, throw more compute at it via subagents
 - One task per subagent for focused execution
 
 ### 3. Self-Improvement Loop
 - After ANY correction from the user: update `tasks/lessons.md` with the pattern
 - Write rules for yourself that prevent the same mistake
-- Ruthlessly iterate on these lessons until mistake rate drops
 - Review lessons at session start for relevant project
 
 ### 4. Verification Before Done
 - Never mark a task complete without proving it works
-- Diff behavior between main and your changes when relevant
-- Ask yourself: "Would a staff engineer approve this?"
 - Run tests, check logs, demonstrate correctness
+- Ask yourself: "Would a staff engineer approve this?"
 
 ### 5. Demand Elegance (Balanced)
 - For non-trivial changes: pause and ask "is there a more elegant way?"
-- If a fix feels hacky: "Knowing everything I know now, implement the elegant solution"
 - Skip this for simple, obvious fixes – don't over-engineer
-- Challenge your own work before presenting it
 
 ### 6. Autonomous Bug Fixing
 - When given a bug report: just fix it. Don't ask for hand-holding
 - Point at logs, errors, failing tests – then resolve them
-- Zero context switching required from the user
-- Go fix failing CI tests without being told how
 
 ## Task Management
 
@@ -103,8 +121,7 @@ Located in `StefanEternal/Templates/`:
 2. **Verify Plan**: Check in before starting implementation
 3. **Track Progress**: Mark items complete as you go
 4. **Explain Changes**: High-level summary at each step
-5. **Document Results**: Add review section to `tasks/todo.md`
-6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
+5. **Capture Lessons**: Update `tasks/lessons.md` after corrections
 
 ## Core Principles
 
