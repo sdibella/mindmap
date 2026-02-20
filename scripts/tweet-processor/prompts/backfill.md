@@ -129,7 +129,12 @@ After creating the atom:
 [<N>/<total>] ✅ <slug> — tags: [<tags>] — confidence: <score> — links: <count>
 ```
 
-If skipping an item (duplicate URL, empty content):
+If overwriting an existing atom:
+```
+[<N>/<total>] 🔄 <slug> — OVERWRITE (old tags: [<old>] → new: [<new>]) — confidence: <score>
+```
+
+If skipping an item (empty/meaningless content):
 ```
 [<N>/<total>] ⏭️  SKIP — <reason>
 ```
@@ -150,21 +155,29 @@ Top categories: <top 3 by count>
 2. Refresh the atom list from `StefanEternal/atoms/` (newly created atoms are now valid link targets)
 3. Save processing state
 
+## Handling Existing Atoms (Overwrite)
+
+Many queue items have a corresponding atom already in `StefanEternal/atoms/` from the old regex system. These are poor quality: generic tags (`migrated`, `ai`), blank Key Takeaways, no `confidence` or `entities` fields, engagement noise in content, and bogus links to non-existent atoms like `[[atomic-note]]`.
+
+**When a queue item's URL matches an existing atom's `source:` field: overwrite the atom completely.** Keep the same slug (filename) — do not create a new file. Regenerate everything from scratch using the queue item's content.
+
+To find the existing atom: grep `StefanEternal/atoms/` for files whose frontmatter `source:` matches the queue item URL.
+
 ## Quality Rules
 
 1. **No hallucinated links.** Only link to atoms that actually exist in `StefanEternal/atoms/`.
-2. **No duplicate atoms.** If an item's source URL matches an existing atom's source field, skip it.
+2. **Overwrite existing atoms.** Old regex versions are low quality — regenerate them fully.
 3. **Clean content.** Strip engagement metrics, "Relevant", "View quotes", timestamps, and X UI artifacts.
-4. **Meaningful titles.** Descriptive titles from content, not raw slugs.
+4. **Meaningful titles.** Descriptive titles from content, never "Tweet" or the raw slug.
 5. **Real confidence.** Semantic understanding, not keyword density.
 6. **One at a time.** Full attention on each item before moving to the next.
 
 ## Error Handling
 
 - Empty/meaningless content: mark `reviewed: true`, log as skip, continue.
-- Slug collision: append `-2`, `-3`, etc.
+- Slug collision on a genuinely new atom: append `-2`, `-3`, etc.
 - Atom to link doesn't exist: skip the link.
-- If you encounter an error creating a file: log it, skip that item, continue with the next.
+- If you encounter an error writing a file: log it, skip that item, continue with the next.
 
 ## Resumability
 

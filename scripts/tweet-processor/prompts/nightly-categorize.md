@@ -133,7 +133,7 @@ Update `scripts/tweet-processor/processing-state.json`:
 ## Quality Rules
 
 1. **No hallucinated links.** Only link to atoms that actually exist in `StefanEternal/atoms/`.
-2. **No duplicate atoms.** If an item's content matches an existing atom (same source URL), skip it and mark reviewed.
+2. **Overwrite stale atoms.** If an item's source URL matches an existing atom, overwrite it — don't skip. Old regex-generated atoms need replacing.
 3. **Clean content.** Strip engagement metrics, "Relevant", "View quotes", timestamps, and other X UI artifacts from content. Keep the actual text.
 4. **Meaningful titles.** Use descriptive titles derived from content, not the raw filename slug.
 5. **Real confidence.** Score based on genuine semantic understanding, not keyword density.
